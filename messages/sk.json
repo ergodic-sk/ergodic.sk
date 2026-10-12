@@ -1,0 +1,164 @@
+{
+  "Metadata": {
+    "title": "Ergodic · Softvérové štúdio v Košiciach",
+    "description": "Web, mobilné aplikácie a automatizácia pre firmy na Slovensku a v EÚ. Najprv nakreslíme možnosti, potom postavíme tú, ktorá sedí vám."
+  },
+  "Nav": {
+    "label": "Listy",
+    "open": "Otvoriť zoznam listov",
+    "method": "Metóda",
+    "services": "Služby",
+    "drawings": "Výkresy",
+    "products": "Produkty",
+    "studio": "Štúdio",
+    "contact": "Kontakt",
+    "cta": "Začať projekt",
+    "language": "Jazyk",
+    "home": "Ergodic, domov"
+  },
+  "Hero": {
+    "eyebrow": "List 01 · Softvérové štúdio · Košice, SK",
+    "eyebrowShort": "List 01 · Košice, SK",
+    "titleA": "Veľa ciest.",
+    "titleB": "Postavíme tú vašu.",
+    "lead": "Web, mobilné aplikácie a automatizácia pre firmy na Slovensku aj za hranicami. Najprv nakreslíme možnosti, potom postavíme tú, ktorá sedí vám, nie priemeru.",
+    "leadShort": "Web, mobil a automatizácia. Najprv nakreslíme možnosti, potom postavíme tú, ktorá sedí vám.",
+    "primary": "Začať projekt",
+    "secondary": "Pozrieť výkresy",
+    "scope": "Rozsah",
+    "scopeValue": "Web · Mobil · Automatizácia",
+    "clients": "Klienti",
+    "clientsValue": "Slovensko · EÚ",
+    "model": "Model",
+    "modelValue": "Mesačný paušál",
+    "caption": "7 zvážených ciest · 1 vybraná",
+    "drawingStart": "Štart",
+    "drawingChosen": "V.04 · Vybraná",
+    "drawingBuilt": "Postavená"
+  },
+  "Method": {
+    "eyebrow": "List 02 · Metóda",
+    "title": "Od prieskumu po systém, ktorý funguje ďalej.",
+    "scale": "Mierka · 1 projekt : 1 cesta",
+    "steps": {
+      "survey": {
+        "title": "Prieskum",
+        "body": "Zistíme, ako vaša firma naozaj funguje: ľudia, nástroje a kadiaľ tečú peniaze."
+      },
+      "variants": {
+        "title": "Varianty",
+        "body": "Nakreslíme možnosti vedľa seba, od hotových riešení po vývoj na mieru, aj s cenou každej."
+      },
+      "build": {
+        "title": "Stavba",
+        "body": "Vybraný variant staviame v malých vydaniach, takže ho používate dávno pred dokončením."
+      },
+      "maintain": {
+        "title": "Údržba",
+        "body": "Mesačný paušál ho udrží v chode a nechá rásť, s jedným človekom, ktorý pozná celý systém."
+      }
+    }
+  },
+  "Services": {
+    "eyebrow": "List 03 · Služby",
+    "title": "Čo kreslíme a staviame.",
+    "items": {
+      "web": {
+        "tag": "Web",
+        "title": "Weby a e-shopy",
+        "body": "Weby a obchody, ktoré predávajú, po slovensky aj po anglicky, rýchle na každom telefóne.",
+        "specs": "Next.js · Astro|Platby cez Stripe|SK / EN"
+      },
+      "mobile": {
+        "tag": "Mobil",
+        "title": "Mobilné aplikácie",
+        "body": "Jeden kód pre iOS aj Android, zverejnený v oboch obchodoch.",
+        "specs": "React Native · Expo|App Store · Google Play|Push · Offline"
+      },
+      "automation": {
+        "tag": "Automatizácia",
+        "title": "Automatizácia a AI",
+        "body": "Procesy, ktoré bežia samy, s človekom tam, kde na tom záleží.",
+        "specs": "API · Integrácie|AI procesy|Interné dashboardy"
+      },
+      "care": {
+        "tag": "Starostlivosť",
+        "title": "Starostlivosť a paušály",
+        "body": "Hosting, aktualizácie a menšie funkcie každý mesiac, od jedného kontaktu.",
+        "specs": "Mesačný plán|Hosting · Monitoring|Jeden kontakt"
+      }
+    }
+  },
+  "Drawings": {
+    "eyebrow": "List 04 · Výkresy",
+    "title": "Každý projekt je štúdia ciest.",
+    "lead": "Čo sme zvážili, čo sme postavili a prečo.",
+    "considered": "Zvážené",
+    "built": "Postavené",
+    "outcome": "Výsledok",
+    "variants": "{count, plural, one {# variant} few {# varianty} other {# variantov}}",
+    "items": {
+      "dwg002": { "kind": "E-shop", "client": "[Názov klienta]", "stack": "[stack]", "result": "[výsledok]" },
+      "dwg003": { "kind": "Web reštaurácie", "client": "[Názov klienta]", "stack": "[stack]", "result": "[výsledok]" },
+      "dwg004": { "kind": "Mobilná aplikácia", "client": "[Názov klienta]", "stack": "[stack]", "result": "[výsledok]" }
+    }
+  },
+  "Products": {
+    "eyebrow": "List 05 · Produkty",
+    "title": "Naše vlastné výkresy.",
+    "tag": "P-01 · Reštaurácie",
+    "body": "Rezervácie a predplatené podujatia so vstupenkami pre reštaurácie. Hostia platia pri rezervácii a peniaze idú priamo na účet reštaurácie."
+  },
+  "Studio": {
+    "eyebrow": "List 06 · Štúdio",
+    "title": "Roman Denysov, zakladateľ.",
+    "body": "Softvérový inžinier z Košíc. [N] rokov stavia produkty v Reacte a React Native pre tímy od miestnych reštaurácií po medzinárodné firmy. Hovoríte priamo s človekom, ktorý kreslí možnosti aj píše kód.",
+    "photoAlt": "Roman Denysov",
+    "languages": "Jazyky",
+    "stack": "Stack",
+    "firm": "Firma"
+  },
+  "Contact": {
+    "eyebrow": "List 07 · Kontakt",
+    "title": "Povedzte nám, kam sa chcete dostať.",
+    "lead": "Do jedného pracovného dňa sa ozveme s otázkami a potom pošleme prvý výkres vašich možností."
+  },
+  "Brief": {
+    "name": "Meno",
+    "namePlaceholder": "Vaše meno",
+    "company": "Firma",
+    "companyPlaceholder": "Firma, IČO nepovinné",
+    "needs": "Čo potrebujete",
+    "needOptions": {
+      "website": "Web",
+      "eshop": "E-shop",
+      "mobile": "Mobilná aplikácia",
+      "automation": "Automatizácia",
+      "unsure": "Ešte neviem"
+    },
+    "message": "Kam sa chcete dostať",
+    "messagePlaceholder": "Pár viet o firme a o cieli.",
+    "email": "E-mail",
+    "emailPlaceholder": "vy@firma.sk",
+    "submit": "Odoslať zadanie",
+    "sending": "Odosielam…",
+    "consent": "Údaje použijeme len na odpoveď. <link>Ochrana osobných údajov</link>",
+    "success": "Ďakujeme. Zadanie máme na stole, ozveme sa do jedného pracovného dňa.",
+    "errors": {
+      "name": "Napíšte nám, prosím, svoje meno.",
+      "email": "Zadajte, prosím, platný e-mail.",
+      "message": "Napíšte, prosím, pár slov o cieli.",
+      "send": "Zadanie sa nepodarilo odoslať. Napíšte nám, prosím, na office@ergodic.sk."
+    }
+  },
+  "Footer": {
+    "privacy": "Ochrana osobných údajov",
+    "linkedin": "LinkedIn",
+    "heystol": "heystol"
+  },
+  "Privacy": {
+    "eyebrow": "Ochrana osobných údajov",
+    "title": "Ochrana osobných údajov",
+    "back": "Späť na web"
+  }
+}

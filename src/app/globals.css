@@ -1,0 +1,248 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* Ergodic · C · Cobalt. One light palette, no dark mode: the site alternates
+   cobalt and paper sheets by design. */
+:root {
+  --cobalt: #1f2ce6;
+  --cobalt-deep: #1823c4;
+  --paper: #f3eee4;
+  --paper-2: #f7f4ee;
+  --ink: #0c1033;
+  --ink-soft: #33375a;
+  --ink-mute: #4b4f6e;
+  --signal: #ff7a3d;
+  --lilac-100: #dadcf8;
+  --lilac-200: #d5d8f8;
+  --lilac-300: #c9ccf7;
+  --lilac-400: #aeb2f2;
+  --lilac-500: #9ea3f0;
+
+  /* shadcn tokens */
+  --radius: 4px;
+  --background: var(--paper);
+  --foreground: var(--ink);
+  --card: var(--paper-2);
+  --card-foreground: var(--ink);
+  --popover: var(--cobalt);
+  --popover-foreground: var(--paper);
+  --primary: var(--cobalt);
+  --primary-foreground: var(--paper);
+  --secondary: var(--paper);
+  --secondary-foreground: var(--ink);
+  --muted: #e9e3d6;
+  --muted-foreground: var(--ink-mute);
+  --accent: var(--signal);
+  --accent-foreground: var(--ink);
+  --destructive: #d92d20;
+  --border: rgb(31 44 230 / 0.35);
+  --input: rgb(31 44 230 / 0.5);
+  --ring: var(--signal);
+}
+
+@theme inline {
+  --font-sans: var(--font-instrument-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), ui-monospace, monospace;
+
+  --color-cobalt: var(--cobalt);
+  --color-cobalt-deep: var(--cobalt-deep);
+  --color-paper: var(--paper);
+  --color-paper-2: var(--paper-2);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-mute: var(--ink-mute);
+  --color-signal: var(--signal);
+  --color-lilac-100: var(--lilac-100);
+  --color-lilac-200: var(--lilac-200);
+  --color-lilac-300: var(--lilac-300);
+  --color-lilac-400: var(--lilac-400);
+  --color-lilac-500: var(--lilac-500);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --radius-sm: var(--radius);
+  --radius-md: var(--radius);
+  --radius-lg: var(--radius);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  a:hover {
+    color: var(--signal);
+  }
+  ::selection {
+    background: var(--signal);
+    color: var(--ink);
+  }
+}
+
+@utility font-mono-caps {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+}
+
+/* Millimetre paper: cream lines on cobalt, cobalt lines on paper. */
+@utility sheet-cobalt {
+  background-color: var(--cobalt);
+  background-image:
+    linear-gradient(rgb(243 238 228 / 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(243 238 228 / 0.05) 1px, transparent 1px);
+  background-size: 32px 32px;
+  color: var(--paper);
+}
+
+@utility sheet-paper {
+  background-color: var(--paper);
+  background-image:
+    linear-gradient(rgb(31 44 230 / 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(31 44 230 / 0.07) 1px, transparent 1px);
+  background-size: 24px 24px;
+  color: var(--ink);
+}
+
+/* Film grain over the whole page, as in the identity. */
+.grain {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  mix-blend-mode: soft-light;
+  opacity: 0.45;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='240' height='240' filter='url(%23n)'/></svg>");
+}
+
+/* Hero path study: 11 s loop. Pencil variants, then the chosen path is built
+   and its wall rises. */
+.ps-pencil {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: ps-pencil 11s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+.ps-dots {
+  opacity: 0;
+  animation: ps-dots 11s linear infinite;
+}
+.ps-chosen {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: ps-build 11s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+.ps-wall {
+  opacity: 0;
+  animation: ps-rise 11s cubic-bezier(0.2, 0.7, 0.2, 1) infinite;
+}
+.ps-endpt {
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: ps-pop 11s ease-out infinite;
+}
+.ps-lbl {
+  opacity: 0;
+  animation: ps-lbl 11s linear infinite;
+}
+.ps-lblc {
+  opacity: 0;
+  animation: ps-lblc 11s linear infinite;
+}
+
+@keyframes ps-pencil {
+  0% { stroke-dashoffset: 1; opacity: 1; }
+  16% { stroke-dashoffset: 0; opacity: 1; }
+  44% { opacity: 1; }
+  54% { opacity: 0.22; }
+  86% { opacity: 0.22; stroke-dashoffset: 0; }
+  94%, 100% { opacity: 0; stroke-dashoffset: 0; }
+}
+@keyframes ps-dots {
+  0%, 46% { opacity: 0; }
+  56% { opacity: 0.9; }
+  86% { opacity: 0.9; }
+  94%, 100% { opacity: 0; }
+}
+@keyframes ps-build {
+  0%, 40% { stroke-dashoffset: 1; opacity: 1; }
+  54% { stroke-dashoffset: 0; opacity: 1; }
+  88% { opacity: 1; stroke-dashoffset: 0; }
+  95%, 100% { opacity: 0; stroke-dashoffset: 0; }
+}
+@keyframes ps-rise {
+  0%, 54% { opacity: 0; transform: translateY(14px); }
+  62% { opacity: 1; transform: translateY(0); }
+  88% { opacity: 1; transform: translateY(0); }
+  95%, 100% { opacity: 0; transform: translateY(0); }
+}
+@keyframes ps-pop {
+  0%, 61% { opacity: 0; transform: scale(0); }
+  64% { opacity: 1; transform: scale(1.35); }
+  67% { opacity: 1; transform: scale(1); }
+  88% { opacity: 1; transform: scale(1); }
+  95%, 100% { opacity: 0; transform: scale(1); }
+}
+@keyframes ps-lbl {
+  0%, 8% { opacity: 0; }
+  16% { opacity: 0.75; }
+  44% { opacity: 0.75; }
+  54% { opacity: 0.3; }
+  86% { opacity: 0.3; }
+  94%, 100% { opacity: 0; }
+}
+@keyframes ps-lblc {
+  0%, 60% { opacity: 0; }
+  66% { opacity: 1; }
+  88% { opacity: 1; }
+  95%, 100% { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ps-pencil,
+  .ps-chosen {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
+  .ps-pencil {
+    opacity: 0.22;
+  }
+  .ps-dots,
+  .ps-wall,
+  .ps-endpt,
+  .ps-lblc {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+  .ps-lbl {
+    animation: none;
+    opacity: 0.3;
+  }
+}
