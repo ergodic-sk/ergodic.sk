@@ -61,7 +61,7 @@ export function Method() {
   const t = useTranslations("Method")
 
   return (
-    <section id="method" className="sheet-paper scroll-mt-4 py-20 md:py-24">
+    <section id="method" className="sheet-paper py-20 md:py-24">
       <Container className="flex flex-col gap-12">
         <SheetHeading
           tone="paper"

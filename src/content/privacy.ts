@@ -40,8 +40,10 @@ export const privacy: Record<Locale, { updated: string; sections: Section[] }> =
         ],
       },
       {
-        title: "Cookies",
-        body: ["Web nepoužíva analytické ani reklamné cookies."],
+        title: "Cookies a meranie návštevnosti",
+        body: [
+          "Návštevnosť meriame cez Vercel Web Analytics (Vercel Inc.). Nepoužíva cookies a neukladá údaje, podľa ktorých by sa dal identifikovať konkrétny návštevník: vidíme len súhrnné počty, napríklad koľko ľudí klikne na tlačidlo „Začať projekt“. Reklamné cookies nepoužívame.",
+        ],
       },
     ],
   },
@@ -81,8 +83,10 @@ export const privacy: Record<Locale, { updated: string; sections: Section[] }> =
         ],
       },
       {
-        title: "Cookies",
-        body: ["The site uses no analytics or advertising cookies."],
+        title: "Cookies and analytics",
+        body: [
+          "We measure traffic with Vercel Web Analytics (Vercel Inc.). It sets no cookies and stores nothing that identifies an individual visitor: we only see aggregate counts, such as how many people click “Start a project”. We use no advertising cookies.",
+        ],
       },
     ],
   },

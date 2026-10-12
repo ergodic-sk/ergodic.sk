@@ -63,7 +63,7 @@ export function Services() {
   const t = useTranslations("Services")
 
   return (
-    <section id="services" className="sheet-cobalt scroll-mt-4 py-20 md:py-24">
+    <section id="services" className="sheet-cobalt py-20 md:py-24">
       <Container className="flex flex-col gap-12">
         <SheetHeading tone="cobalt" eyebrow={t("eyebrow")} title={t("title")} />
         <ul className="grid gap-6 sm:grid-cols-2 xl:grid-cols-4">

@@ -10,6 +10,7 @@ import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group"
 import { Link } from "@/i18n/navigation"
 import { site } from "@/config/site"
 import { briefMailto, invalidFields, needs, type BriefField, type Need } from "@/lib/brief/schema"
+import { trackEvent } from "@/lib/analytics"
 import { cn } from "@/lib/utils"
 
 const cell = "border-paper/30 flex flex-col gap-2 px-4.5 py-4"
@@ -40,8 +41,12 @@ export function BriefForm() {
     }
     const invalid = invalidFields(brief)
     setErrors(invalid)
-    if (invalid.length) return
+    if (invalid.length) {
+      trackEvent("brief_invalid", { fields: invalid.join(",") })
+      return
+    }
 
+    trackEvent("brief_submit", { needs: chosen.join(",") || "none", count: chosen.length })
     const labels = chosen.map((n) => t(`needOptions.${n}`))
     window.location.href = briefMailto(site.email, brief, labels)
     setOpened(true)
@@ -121,7 +126,13 @@ export function BriefForm() {
         <ToggleGroup
           multiple
           value={selected}
-          onValueChange={setSelected}
+          onValueChange={(next) => {
+            const added = next.find((n) => !selected.includes(n))
+            const removed = selected.find((n) => !next.includes(n))
+            const need = added ?? removed
+            if (need) trackEvent("need_toggle", { need, selected: Boolean(added) })
+            setSelected(next)
+          }}
           spacing={2.5}
           className="flex-wrap"
         >

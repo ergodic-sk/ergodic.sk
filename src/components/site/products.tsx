@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl"
 import { site } from "@/config/site"
+import { trackAttrs } from "@/lib/analytics"
 import { Container, SheetHeading } from "./sheet-heading"
 
 function TableDrawing() {
@@ -31,7 +32,7 @@ export function Products() {
   const t = useTranslations("Products")
 
   return (
-    <section id="products" className="sheet-cobalt scroll-mt-4 py-20 md:py-24">
+    <section id="products" className="sheet-cobalt py-20 md:py-24">
       <Container className="flex flex-col gap-10">
         <SheetHeading tone="cobalt" eyebrow={t("eyebrow")} title={t("title")} />
         <article className="border-paper/45 flex flex-col items-start gap-10 border p-6 md:flex-row md:items-center md:justify-between md:px-10 md:py-9">
@@ -43,6 +44,7 @@ export function Products() {
               href={site.heystol}
               target="_blank"
               rel="noopener"
+              {...trackAttrs("heystol_click", { location: "products" })}
               className="text-[17px] font-semibold underline-offset-[5px]"
             >
               heystol.com ↗

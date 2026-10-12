@@ -1,9 +1,9 @@
 import { useTranslations } from "next-intl"
 import { buttonVariants } from "@/components/ui/button"
+import { trackAttrs } from "@/lib/analytics"
 import { cn } from "@/lib/utils"
 import { PathFan, PathStudy } from "./path-study"
 import { Container } from "./sheet-heading"
-import { SiteHeader } from "./site-header"
 
 function SheetFrame() {
   const corner = "absolute size-5 border-paper/70"
@@ -28,9 +28,8 @@ export function Hero() {
   ]
 
   return (
-    <section className="sheet-cobalt relative flex min-h-svh flex-col md:min-h-[min(900px,100svh)] max-md:[background-size:24px_24px]">
+    <section className="sheet-cobalt relative -mt-16 flex min-h-svh flex-col pt-16 md:-mt-24 md:min-h-[min(900px,100svh)] md:pt-24 max-md:[background-size:24px_24px]">
       <SheetFrame />
-      <SiteHeader />
 
       <Container className="relative flex grow flex-col justify-center gap-10 pt-7 pb-6 md:pb-18 lg:flex-row lg:items-center lg:justify-between">
         <div className="flex grow flex-col gap-5 md:gap-6.5 lg:max-w-[560px] lg:grow-0">
@@ -57,12 +56,14 @@ export function Hero() {
           <div className="mt-auto flex flex-col gap-3 md:mt-0 md:flex-row md:items-center md:gap-6">
             <a
               href="#contact"
+              {...trackAttrs("cta_click", { location: "hero", target: "contact" })}
               className={cn(buttonVariants({ variant: "paper", size: "xl" }), "no-underline")}
             >
               {t("primary")} →
             </a>
             <a
               href="#drawings"
+              {...trackAttrs("cta_click", { location: "hero", target: "drawings" })}
               className="text-paper max-md:border-paper/55 inline-flex h-12 items-center justify-center text-base font-medium underline-offset-[5px] max-md:rounded-sm max-md:border max-md:no-underline md:h-auto md:text-[17px] md:underline"
             >
               {t("secondary")}
