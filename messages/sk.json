@@ -98,9 +98,24 @@
     "outcome": "Výsledok",
     "variants": "{count, plural, one {# variant} few {# varianty} other {# variantov}}",
     "items": {
-      "dwg002": { "kind": "E-shop", "client": "[Názov klienta]", "stack": "[stack]", "result": "[výsledok]" },
-      "dwg003": { "kind": "Web reštaurácie", "client": "[Názov klienta]", "stack": "[stack]", "result": "[výsledok]" },
-      "dwg004": { "kind": "Mobilná aplikácia", "client": "[Názov klienta]", "stack": "[stack]", "result": "[výsledok]" }
+      "dwg002": {
+        "kind": "E-shop",
+        "client": "[Názov klienta]",
+        "stack": "[stack]",
+        "result": "[výsledok]"
+      },
+      "dwg003": {
+        "kind": "Web reštaurácie",
+        "client": "[Názov klienta]",
+        "stack": "[stack]",
+        "result": "[výsledok]"
+      },
+      "dwg004": {
+        "kind": "Mobilná aplikácia",
+        "client": "[Názov klienta]",
+        "stack": "[stack]",
+        "result": "[výsledok]"
+      }
     }
   },
   "Products": {
@@ -141,14 +156,13 @@
     "email": "E-mail",
     "emailPlaceholder": "vy@firma.sk",
     "submit": "Odoslať zadanie",
-    "sending": "Odosielam…",
     "consent": "Údaje použijeme len na odpoveď. <link>Ochrana osobných údajov</link>",
-    "success": "Ďakujeme. Zadanie máme na stole, ozveme sa do jedného pracovného dňa.",
+    "success": "Otvorí sa vám e-mailový program s vyplneným zadaním. Stačí ho odoslať.",
+    "successHint": "Nič sa neotvorilo? Napíšte nám na <mail>office@ergodic.sk</mail>.",
     "errors": {
       "name": "Napíšte nám, prosím, svoje meno.",
       "email": "Zadajte, prosím, platný e-mail.",
-      "message": "Napíšte, prosím, pár slov o cieli.",
-      "send": "Zadanie sa nepodarilo odoslať. Napíšte nám, prosím, na office@ergodic.sk."
+      "message": "Napíšte, prosím, pár slov o cieli."
     }
   },
   "Footer": {

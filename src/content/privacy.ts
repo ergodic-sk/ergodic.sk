@@ -16,7 +16,7 @@ export const privacy: Record<Locale, { updated: string; sections: Section[] }> =
       {
         title: "Aké údaje spracúvame a prečo",
         body: [
-          "Keď nám pošlete zadanie cez formulár, spracúvame meno, názov firmy alebo IČO, e-mail a text správy. Použijeme ich len na to, aby sme vám odpovedali a pripravili ponuku.",
+          "Formulár na webe nič neodosiela ani neukladá: vyplnené zadanie sa otvorí vo vašom e-mailovom programe a odošlete ho sami. Z e-mailu, ktorý nám príde, spracúvame meno, názov firmy alebo IČO, e-mailovú adresu a text správy. Použijeme ich len na to, aby sme vám odpovedali a pripravili ponuku.",
           "Právnym základom je vykonanie opatrení pred uzavretím zmluvy na vašu žiadosť (čl. 6 ods. 1 písm. b) GDPR).",
         ],
       },
@@ -29,7 +29,7 @@ export const privacy: Record<Locale, { updated: string; sections: Section[] }> =
       {
         title: "Kto k nim má prístup",
         body: [
-          "Správa sa doručuje e-mailom cez poštový server spoločnosti WebSupport s. r. o. a web beží u poskytovateľa hostingu. Obaja sú sprostredkovatelia, ktorí údaje spracúvajú len podľa našich pokynov. Údaje nepredávame ani nepoužívame na marketing.",
+          "K e-mailom má prístup poskytovateľ našej e-mailovej schránky a web beží u poskytovateľa hostingu. Obaja sú sprostredkovatelia, ktorí údaje spracúvajú len podľa našich pokynov. Údaje nepredávame ani nepoužívame na marketing.",
         ],
       },
       {
@@ -57,7 +57,7 @@ export const privacy: Record<Locale, { updated: string; sections: Section[] }> =
       {
         title: "What we process and why",
         body: [
-          "When you send a brief through the form, we process your name, company name or IČO, email and the message. We use them only to reply to you and prepare an offer.",
+          "The form on the site does not send or store anything: the filled-in brief opens in your own mail app and you send it yourself. From the email we receive, we process your name, company name or IČO, email address and the message. We use them only to reply to you and prepare an offer.",
           "The legal basis is taking steps at your request before entering into a contract (Art. 6(1)(b) GDPR).",
         ],
       },
@@ -70,7 +70,7 @@ export const privacy: Record<Locale, { updated: string; sections: Section[] }> =
       {
         title: "Who has access",
         body: [
-          "The brief is delivered by email through the mail server of WebSupport s. r. o., and the site runs at a hosting provider. Both are processors acting only on our instructions. We do not sell the data or use it for marketing.",
+          "Our mailbox provider has access to the emails, and the site runs at a hosting provider. Both are processors acting only on our instructions. We do not sell the data or use it for marketing.",
         ],
       },
       {

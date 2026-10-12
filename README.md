@@ -9,13 +9,12 @@ Company site of Ergodic s. r. o. Built from the "C · Cobalt" identity: blueprin
 - Tailwind CSS 4, brand tokens in `src/app/globals.css`
 - next-intl: Slovak at `/`, English at `/en` (`messages/*.json`)
 - Hero animation: plain SVG + CSS keyframes, respects `prefers-reduced-motion`
-- Contact form: Server Action → nodemailer → SMTP (WebSupport)
+- Contact form: client-side validation, then opens a prefilled `mailto:` to office@ergodic.sk (no server sending for now)
 
 ## Develop
 
 ```bash
 pnpm install
-cp .env.example .env.local   # fill SMTP_PASSWORD to test the form
 pnpm dev
 ```
 
@@ -33,4 +32,4 @@ pnpm dev
 
 ## Deploy
 
-Vercel, region `fra1` (`vercel.json`). Set the variables from `.env.example` in the project settings.
+Vercel, region `fra1` (`vercel.json`).

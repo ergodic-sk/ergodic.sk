@@ -1,18 +1,16 @@
 "use client"
 
-import { useActionState, useState } from "react"
-import { useLocale, useTranslations } from "next-intl"
+import { useState } from "react"
+import { useTranslations } from "next-intl"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { ToggleGroup, ToggleGroupItem } from "@/components/ui/toggle-group"
 import { Link } from "@/i18n/navigation"
-import { submitBrief } from "@/lib/brief/actions"
-import { needs, type BriefField, type BriefState } from "@/lib/brief/schema"
+import { site } from "@/config/site"
+import { briefMailto, invalidFields, needs, type BriefField, type Need } from "@/lib/brief/schema"
 import { cn } from "@/lib/utils"
-
-const initialState: BriefState = { status: "idle" }
 
 const cell = "border-paper/30 flex flex-col gap-2 px-4.5 py-4"
 const label = "font-mono-caps text-lilac-300 text-[11px] font-normal tracking-[0.08em]"
@@ -21,11 +19,35 @@ const field =
 
 export function BriefForm() {
   const t = useTranslations("Brief")
-  const locale = useLocale()
-  const [state, formAction, pending] = useActionState(submitBrief, initialState)
   const [selected, setSelected] = useState<string[]>(["website"])
+  const [errors, setErrors] = useState<BriefField[]>([])
+  const [opened, setOpened] = useState(false)
 
-  if (state.status === "success") {
+  // No server-side sending for now: the brief opens prefilled in the visitor's mail app.
+  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault()
+    const data = new FormData(event.currentTarget)
+    const text = (key: string) => String(data.get(key) ?? "")
+    if (text("website")) return
+
+    const chosen = needs.filter((n) => selected.includes(n))
+    const brief = {
+      name: text("name"),
+      company: text("company"),
+      needs: chosen as Need[],
+      message: text("message"),
+      email: text("email"),
+    }
+    const invalid = invalidFields(brief)
+    setErrors(invalid)
+    if (invalid.length) return
+
+    const labels = chosen.map((n) => t(`needOptions.${n}`))
+    window.location.href = briefMailto(site.email, brief, labels)
+    setOpened(true)
+  }
+
+  if (opened) {
     return (
       <div
         role="status"
@@ -33,12 +55,16 @@ export function BriefForm() {
       >
         <span className="bg-signal size-3 rounded-full" aria-hidden="true" />
         <p className="text-2xl font-semibold tracking-[-0.03em] text-balance">{t("success")}</p>
+        <p className="text-lilac-200 text-[15px]">
+          {t.rich("successHint", {
+            mail: (chunks) => <a href={`mailto:${site.email}`}>{chunks}</a>,
+          })}
+        </p>
       </div>
     )
   }
 
-  const values = state.status === "error" ? state.values : undefined
-  const invalid = (f: BriefField) => state.status === "error" && state.fields.includes(f)
+  const invalid = (f: BriefField) => errors.includes(f)
   const errorId = (f: BriefField) => `brief-${f}-error`
 
   const fieldError = (name: BriefField) =>
@@ -50,14 +76,10 @@ export function BriefForm() {
 
   return (
     <form
-      action={formAction}
+      onSubmit={handleSubmit}
       noValidate
       className="border-paper/55 grid grow grid-cols-1 border md:grid-cols-2 lg:self-start"
     >
-      <input type="hidden" name="locale" value={locale} />
-      {selected.map((need) => (
-        <input key={need} type="hidden" name="needs" value={need} />
-      ))}
       <div aria-hidden="true" className="absolute -left-[9999px] h-px w-px overflow-hidden">
         <label>
           Website
@@ -75,7 +97,6 @@ export function BriefForm() {
           required
           autoComplete="name"
           placeholder={t("namePlaceholder")}
-          defaultValue={values?.name}
           aria-invalid={invalid("name") || undefined}
           aria-describedby={invalid("name") ? errorId("name") : undefined}
           className={field}
@@ -91,7 +112,6 @@ export function BriefForm() {
           name="company"
           autoComplete="organization"
           placeholder={t("companyPlaceholder")}
-          defaultValue={values?.company}
           className={field}
         />
       </div>
@@ -128,7 +148,6 @@ export function BriefForm() {
           required
           rows={4}
           placeholder={t("messagePlaceholder")}
-          defaultValue={values?.message}
           aria-invalid={invalid("message") || undefined}
           aria-describedby={invalid("message") ? errorId("message") : undefined}
           className={cn(field, "resize-none border-b-0 text-[17px] leading-normal md:text-[17px]")}
@@ -147,7 +166,6 @@ export function BriefForm() {
           required
           autoComplete="email"
           placeholder={t("emailPlaceholder")}
-          defaultValue={values?.email}
           aria-invalid={invalid("email") || undefined}
           aria-describedby={invalid("email") ? errorId("email") : undefined}
           className={field}
@@ -155,17 +173,12 @@ export function BriefForm() {
         {fieldError("email")}
       </div>
       <div className={cn(cell, "justify-center gap-3 md:items-end")}>
-        <Button type="submit" variant="paper" size="xl" disabled={pending} className="max-md:w-full">
-          {pending ? t("sending") : `${t("submit")} →`}
+        <Button type="submit" variant="paper" size="xl" className="max-md:w-full">
+          {t("submit")} →
         </Button>
       </div>
 
       <div className="border-paper/30 text-lilac-300 flex flex-col gap-2 border-t px-4.5 py-3 text-xs md:col-span-2">
-        {state.status === "error" && state.sendFailed && (
-          <p role="alert" className="text-signal text-sm">
-            {t("errors.send")}
-          </p>
-        )}
         <p>
           {t.rich("consent", {
             link: (chunks) => (

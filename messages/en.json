@@ -98,9 +98,24 @@
     "outcome": "Outcome",
     "variants": "{count, plural, one {# variant} other {# variants}}",
     "items": {
-      "dwg002": { "kind": "E-shop", "client": "[Client name]", "stack": "[stack]", "result": "[result]" },
-      "dwg003": { "kind": "Restaurant web", "client": "[Client name]", "stack": "[stack]", "result": "[result]" },
-      "dwg004": { "kind": "Mobile app", "client": "[Client name]", "stack": "[stack]", "result": "[result]" }
+      "dwg002": {
+        "kind": "E-shop",
+        "client": "[Client name]",
+        "stack": "[stack]",
+        "result": "[result]"
+      },
+      "dwg003": {
+        "kind": "Restaurant web",
+        "client": "[Client name]",
+        "stack": "[stack]",
+        "result": "[result]"
+      },
+      "dwg004": {
+        "kind": "Mobile app",
+        "client": "[Client name]",
+        "stack": "[stack]",
+        "result": "[result]"
+      }
     }
   },
   "Products": {
@@ -141,14 +156,13 @@
     "email": "Email",
     "emailPlaceholder": "you@company.sk",
     "submit": "Send brief",
-    "sending": "Sending…",
     "consent": "We use these details only to reply to you. <link>Privacy</link>",
-    "success": "Thank you. The brief is on our desk, we reply within one working day.",
+    "success": "Your mail app should open with the brief filled in. Just press send.",
+    "successHint": "Nothing opened? Write to <mail>office@ergodic.sk</mail>.",
     "errors": {
       "name": "Please tell us your name.",
       "email": "Please enter a valid email.",
-      "message": "Please write a few words about the goal.",
-      "send": "The brief did not go through. Please write to office@ergodic.sk instead."
+      "message": "Please write a few words about the goal."
     }
   },
   "Footer": {
