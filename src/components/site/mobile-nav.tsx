@@ -9,6 +9,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
+import { trackAttrs, trackEvent } from "@/lib/analytics"
 import { cn } from "@/lib/utils"
 import { LocaleSwitch } from "./locale-switch"
 import { navItems } from "./nav-items"
@@ -19,7 +20,13 @@ export function MobileNav() {
   const close = () => setOpen(false)
 
   return (
-    <Sheet open={open} onOpenChange={setOpen}>
+    <Sheet
+      open={open}
+      onOpenChange={(next) => {
+        if (next) trackEvent("mobile_nav_open")
+        setOpen(next)
+      }}
+    >
       <SheetTrigger
         render={
           <Button
@@ -54,6 +61,7 @@ export function MobileNav() {
         <a
           href="#contact"
           onClick={close}
+          {...trackAttrs("cta_click", { location: "mobile_nav", target: "contact" })}
           className={cn(buttonVariants({ variant: "paper", size: "xl" }), "w-full no-underline")}
         >
           {t("cta")} →

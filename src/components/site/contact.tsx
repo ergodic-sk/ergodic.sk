@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl"
 import { site } from "@/config/site"
+import { trackAttrs } from "@/lib/analytics"
 import { BriefForm } from "./brief-form"
 import { Container } from "./sheet-heading"
 
@@ -16,7 +17,11 @@ export function Contact() {
           </h2>
           <p className="text-lilac-200 text-[17px] leading-[1.55] md:text-[19px]">{t("lead")}</p>
           <address className="flex flex-col gap-2.5 font-mono text-sm tracking-[0.02em] not-italic">
-            <a href={`mailto:${site.email}`} className="no-underline">
+            <a
+              href={`mailto:${site.email}`}
+              {...trackAttrs("contact_email_click", { location: "contact" })}
+              className="no-underline"
+            >
               {site.email}
             </a>
             {site.phone && (

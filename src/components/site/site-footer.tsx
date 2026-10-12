@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl"
 import { site } from "@/config/site"
 import { Link } from "@/i18n/navigation"
+import { trackAttrs } from "@/lib/analytics"
 import { Wordmark } from "./logo"
 import { Container } from "./sheet-heading"
 
@@ -15,11 +16,21 @@ export function SiteFooter() {
           <nav className="text-lilac-100 flex flex-wrap gap-x-7 gap-y-2 text-[15px]">
             <Link href="/privacy">{t("privacy")}</Link>
             {site.linkedin && (
-              <a href={site.linkedin} target="_blank" rel="noopener">
+              <a
+                href={site.linkedin}
+                target="_blank"
+                rel="noopener"
+                {...trackAttrs("linkedin_click", { location: "footer" })}
+              >
                 {t("linkedin")}
               </a>
             )}
-            <a href={site.heystol} target="_blank" rel="noopener">
+            <a
+              href={site.heystol}
+              target="_blank"
+              rel="noopener"
+              {...trackAttrs("heystol_click", { location: "footer" })}
+            >
               {t("heystol")}
             </a>
           </nav>

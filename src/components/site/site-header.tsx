@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl"
 import { buttonVariants } from "@/components/ui/button"
 import { Link } from "@/i18n/navigation"
+import { trackAttrs } from "@/lib/analytics"
 import { cn } from "@/lib/utils"
 import { LocaleSwitch } from "./locale-switch"
 import { LogoMark, Wordmark } from "./logo"
@@ -39,6 +40,7 @@ export function SiteHeader() {
             <LocaleSwitch />
             <a
               href="#contact"
+              {...trackAttrs("cta_click", { location: "header", target: "contact" })}
               className={cn(
                 buttonVariants({ variant: "paper" }),
                 "font-mono-caps h-auto px-4.5 py-3 text-xs font-medium tracking-[0.08em] no-underline"

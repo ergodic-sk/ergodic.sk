@@ -1,7 +1,9 @@
 import type { Metadata, Viewport } from "next"
 import { IBM_Plex_Mono, Instrument_Sans } from "next/font/google"
+import { Analytics } from "@vercel/analytics/next"
 import { NextIntlClientProvider } from "next-intl"
 import { getLocale, getTranslations } from "next-intl/server"
+import { ClickTracker } from "@/components/site/click-tracker"
 import { site } from "@/config/site"
 import { routing } from "@/i18n/routing"
 import "../globals.css"
@@ -55,6 +57,8 @@ export default async function LocaleLayout({ children }: LayoutProps<"/[locale]"
       <body>
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
         <div className="grain" aria-hidden="true" />
+        <ClickTracker />
+        <Analytics />
       </body>
     </html>
   )

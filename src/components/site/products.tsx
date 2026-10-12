@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl"
 import { site } from "@/config/site"
+import { trackAttrs } from "@/lib/analytics"
 import { Container, SheetHeading } from "./sheet-heading"
 
 function TableDrawing() {
@@ -43,6 +44,7 @@ export function Products() {
               href={site.heystol}
               target="_blank"
               rel="noopener"
+              {...trackAttrs("heystol_click", { location: "products" })}
               className="text-[17px] font-semibold underline-offset-[5px]"
             >
               heystol.com ↗
