@@ -51,7 +51,7 @@ export function Studio() {
   ]
 
   return (
-    <section id="studio" className="sheet-paper scroll-mt-4 py-20 md:py-24">
+    <section id="studio" className="sheet-paper py-20 md:py-24">
       <Container className="flex flex-col gap-12 md:flex-row md:gap-18">
         <PhotoFrame alt={t("photoAlt")} />
         <div className="flex max-w-[640px] flex-col gap-4.5">

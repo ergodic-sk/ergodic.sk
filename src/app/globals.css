@@ -88,6 +88,13 @@
   }
   html {
     scroll-behavior: smooth;
+    /* Keep anchored sections clear of the sticky header (h-16 / md:h-24). */
+    scroll-padding-top: 4rem;
+  }
+  @media (width >= 48rem) {
+    html {
+      scroll-padding-top: 6rem;
+    }
   }
   @media (prefers-reduced-motion: reduce) {
     html {

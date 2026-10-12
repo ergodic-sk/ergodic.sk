@@ -7,7 +7,7 @@ export function Contact() {
   const t = useTranslations("Contact")
 
   return (
-    <section id="contact" className="sheet-cobalt scroll-mt-4 py-20 md:py-24">
+    <section id="contact" className="sheet-cobalt py-20 md:py-24">
       <Container className="flex flex-col gap-12 lg:flex-row lg:gap-18">
         <div className="flex flex-col gap-5.5 lg:w-[480px] lg:shrink-0">
           <p className="font-mono-caps text-lilac-300 text-xs tracking-[0.1em]">{t("eyebrow")}</p>

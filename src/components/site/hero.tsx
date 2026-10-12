@@ -3,7 +3,6 @@ import { buttonVariants } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { PathFan, PathStudy } from "./path-study"
 import { Container } from "./sheet-heading"
-import { SiteHeader } from "./site-header"
 
 function SheetFrame() {
   const corner = "absolute size-5 border-paper/70"
@@ -28,9 +27,8 @@ export function Hero() {
   ]
 
   return (
-    <section className="sheet-cobalt relative flex min-h-svh flex-col md:min-h-[min(900px,100svh)] max-md:[background-size:24px_24px]">
+    <section className="sheet-cobalt relative -mt-16 flex min-h-svh flex-col pt-16 md:-mt-24 md:min-h-[min(900px,100svh)] md:pt-24 max-md:[background-size:24px_24px]">
       <SheetFrame />
-      <SiteHeader />
 
       <Container className="relative flex grow flex-col justify-center gap-10 pt-7 pb-6 md:pb-18 lg:flex-row lg:items-center lg:justify-between">
         <div className="flex grow flex-col gap-5 md:gap-6.5 lg:max-w-[560px] lg:grow-0">
