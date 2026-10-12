@@ -1,0 +1,178 @@
+{
+  "Metadata": {
+    "title": "Ergodic · Software studio in Košice",
+    "description": "Web, mobile and automation for businesses in Slovakia and the EU. We draw the options first, then build the one that fits you."
+  },
+  "Nav": {
+    "label": "Sheets",
+    "open": "Open sheet index",
+    "method": "Method",
+    "services": "Services",
+    "drawings": "Drawings",
+    "products": "Products",
+    "studio": "Studio",
+    "contact": "Contact",
+    "cta": "Start a project",
+    "language": "Language",
+    "home": "Ergodic, home"
+  },
+  "Hero": {
+    "eyebrow": "Sheet 01 · Software studio · Košice, SK",
+    "eyebrowShort": "Sheet 01 · Košice, SK",
+    "titleA": "Many paths.",
+    "titleB": "We build the one that’s yours.",
+    "lead": "Web, mobile and automation for businesses in Slovakia and beyond. We draw the options first, then build the one that fits you, not the average.",
+    "leadShort": "Web, mobile and automation. We draw the options first, then build the one that fits you.",
+    "primary": "Start a project",
+    "secondary": "See the drawings",
+    "scope": "Scope",
+    "scopeValue": "Web · Mobile · Automation",
+    "clients": "Clients",
+    "clientsValue": "Slovakia · EU",
+    "model": "Model",
+    "modelValue": "Monthly retainers",
+    "caption": "7 paths considered · 1 chosen",
+    "drawingStart": "Start",
+    "drawingChosen": "V.04 · Chosen",
+    "drawingBuilt": "Built"
+  },
+  "Method": {
+    "eyebrow": "Sheet 02 · Method",
+    "title": "From survey to a system that keeps working.",
+    "scale": "Scale · 1 project : 1 path",
+    "steps": {
+      "survey": {
+        "title": "Survey",
+        "body": "We learn how your business actually runs: people, tools and where the money flows."
+      },
+      "variants": {
+        "title": "Variants",
+        "body": "We draw the options side by side, from off-the-shelf to custom, with what each one costs."
+      },
+      "build": {
+        "title": "Build",
+        "body": "We build the chosen one in small releases, so you use it long before it is finished."
+      },
+      "maintain": {
+        "title": "Maintain",
+        "body": "A monthly retainer keeps it running and growing, with one person who knows the whole system."
+      }
+    }
+  },
+  "Services": {
+    "eyebrow": "Sheet 03 · Services",
+    "title": "What we draw and build.",
+    "items": {
+      "web": {
+        "tag": "Web",
+        "title": "Web & e-shops",
+        "body": "Sites and stores that sell, in Slovak and English, fast on every phone.",
+        "specs": "Next.js · Astro|Stripe payments|SK / EN"
+      },
+      "mobile": {
+        "tag": "Mobile",
+        "title": "Mobile apps",
+        "body": "One codebase for iOS and Android, published in both stores.",
+        "specs": "React Native · Expo|App Store · Google Play|Push · Offline"
+      },
+      "automation": {
+        "tag": "Automation",
+        "title": "Automation & AI",
+        "body": "Workflows that run themselves, with a person where it matters.",
+        "specs": "APIs · Integrations|AI workflows|Internal dashboards"
+      },
+      "care": {
+        "tag": "Care",
+        "title": "Care & retainers",
+        "body": "Hosting, updates and small features every month, from one contact.",
+        "specs": "Monthly plan|Hosting · Monitoring|One contact"
+      }
+    }
+  },
+  "Drawings": {
+    "eyebrow": "Sheet 04 · Drawings",
+    "title": "Every project is a path study.",
+    "lead": "What we considered, what we built, and why.",
+    "considered": "Considered",
+    "built": "Built",
+    "outcome": "Outcome",
+    "variants": "{count, plural, one {# variant} other {# variants}}",
+    "items": {
+      "dwg002": {
+        "kind": "E-shop",
+        "client": "[Client name]",
+        "stack": "[stack]",
+        "result": "[result]"
+      },
+      "dwg003": {
+        "kind": "Restaurant web",
+        "client": "[Client name]",
+        "stack": "[stack]",
+        "result": "[result]"
+      },
+      "dwg004": {
+        "kind": "Mobile app",
+        "client": "[Client name]",
+        "stack": "[stack]",
+        "result": "[result]"
+      }
+    }
+  },
+  "Products": {
+    "eyebrow": "Sheet 05 · Products",
+    "title": "Our own drawings.",
+    "tag": "P-01 · Restaurants",
+    "body": "Reservations and prepaid ticketed events for restaurants. Guests pay when they book, and the money goes straight to the restaurant’s own account."
+  },
+  "Studio": {
+    "eyebrow": "Sheet 06 · Studio",
+    "title": "Roman Denysov, founder.",
+    "body": "Software engineer based in Košice. [N] years building React and React Native products for teams from local restaurants to international companies. You talk to the person who draws the options and writes the code.",
+    "photoAlt": "Roman Denysov",
+    "languages": "Languages",
+    "stack": "Stack",
+    "firm": "Firm"
+  },
+  "Contact": {
+    "eyebrow": "Sheet 07 · Contact",
+    "title": "Tell us where you want to get to.",
+    "lead": "We reply within one working day with questions, then send the first drawing of your options."
+  },
+  "Brief": {
+    "name": "Name",
+    "namePlaceholder": "Your name",
+    "company": "Company",
+    "companyPlaceholder": "Company, IČO optional",
+    "needs": "What do you need",
+    "needOptions": {
+      "website": "Website",
+      "eshop": "E-shop",
+      "mobile": "Mobile app",
+      "automation": "Automation",
+      "unsure": "Not sure yet"
+    },
+    "message": "Where do you want to get to",
+    "messagePlaceholder": "A few sentences about the business and the goal.",
+    "email": "Email",
+    "emailPlaceholder": "you@company.sk",
+    "submit": "Send brief",
+    "consent": "We use these details only to reply to you. <link>Privacy</link>",
+    "success": "Your mail app should open with the brief filled in. Just press send.",
+    "successHint": "Nothing opened? Write to <mail>office@ergodic.sk</mail>.",
+    "errors": {
+      "name": "Please tell us your name.",
+      "email": "Please enter a valid email.",
+      "message": "Please write a few words about the goal."
+    }
+  },
+  "Footer": {
+    "privacy": "Ochrana osobných údajov",
+    "linkedin": "LinkedIn",
+    "heystol": "heystol"
+  },
+  "Privacy": {
+    "eyebrow": "Ochrana osobných údajov",
+    "title": "Privacy",
+    "back": "Back to the site"
+  }
+}
