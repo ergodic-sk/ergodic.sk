@@ -12,7 +12,7 @@ export function Contact() {
     <section id="contact" className="sheet-cobalt py-20 md:py-24">
       <Container className="flex flex-col gap-12 lg:flex-row lg:gap-18">
         <div data-reveal className="flex flex-col gap-5.5 lg:w-[480px] lg:shrink-0">
-          <p className="r-up font-mono-caps text-lilac-300 text-xs tracking-[0.1em]">{t("eyebrow")}</p>
+          <p className="r-up font-mono-caps text-lilac-300 text-xs tracking-[0.1em]">{t("eyebrow", { n: site.showStudio ? "07" : "06" })}</p>
           <h2 style={delay(70)} className="r-up text-4xl leading-none font-semibold tracking-[-0.05em] text-balance md:text-[52px]">
             {t("title")}
           </h2>

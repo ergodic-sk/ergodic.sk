@@ -134,7 +134,7 @@
     "firm": "Firma"
   },
   "Contact": {
-    "eyebrow": "List 07 · Kontakt",
+    "eyebrow": "List {n} · Kontakt",
     "title": "Povedzte nám, kam sa chcete dostať.",
     "lead": "Do jedného pracovného dňa sa ozveme s otázkami a potom pošleme prvý výkres vašich možností."
   },

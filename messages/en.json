@@ -134,7 +134,7 @@
     "firm": "Firm"
   },
   "Contact": {
-    "eyebrow": "Sheet 07 · Contact",
+    "eyebrow": "Sheet {n} · Contact",
     "title": "Tell us where you want to get to.",
     "lead": "We reply within one working day with questions, then send the first drawing of your options."
   },
