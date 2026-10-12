@@ -1,35 +1,50 @@
-# ergodic.sk
+<p align="center">
+  <a href="https://ergodic.sk">
+    <img src="src/app/icon.svg" width="72" height="72" alt="Ergodic">
+  </a>
+</p>
 
-Company site of Ergodic s. r. o. Built from the "C · Cobalt" identity: blueprint sheets, cobalt and paper, signal orange.
+<h1 align="center">Ergodic</h1>
 
-## Stack
+<p align="center">
+  Software studio in Košice, Slovakia.<br>
+  Web, mobile and automation for businesses in Slovakia and the EU.
+</p>
 
-- Next.js 16 (App Router, Cache Components), fully prerendered
-- shadcn/ui on Base UI (`base-lyra` style, components in `src/components/ui`)
-- Tailwind CSS 4, brand tokens in `src/app/globals.css`
-- next-intl: Slovak at `/`, English at `/en` (`messages/*.json`)
-- Hero animation: plain SVG + CSS keyframes, respects `prefers-reduced-motion`
-- Contact form: client-side validation, then opens a prefilled `mailto:` to office@ergodic.sk (no server sending for now)
+<p align="center">
+  <a href="https://ergodic.sk"><strong>ergodic.sk</strong></a>
+  ·
+  <a href="https://ergodic.sk/en">English</a>
+  ·
+  <a href="mailto:office@ergodic.sk">office@ergodic.sk</a>
+</p>
 
-## Develop
+---
 
-```bash
-pnpm install
-pnpm dev
-```
+This repository is the source of [ergodic.sk](https://ergodic.sk), the website of Ergodic s. r. o. It is public so clients and partners can see how we build things. It is not a template or an open-source project.
 
-`pnpm lint`, `pnpm typecheck`, `pnpm build`.
+## What we do
 
-## Content
+- **Web and e-shops** - sites and stores that sell, in Slovak and English, fast on every phone.
+- **Mobile apps** - one codebase for iOS and Android, published in both stores.
+- **Automation and AI** - workflows that run themselves, with a person where it matters.
+- **Care and retainers** - hosting, updates and small features every month, from one contact.
 
-- Copy: `messages/sk.json`, `messages/en.json`
-- Company facts, phone, LinkedIn, founder photo: `src/config/site.ts` (`null` hides the item)
-- Privacy notice: `src/content/privacy.ts`
+We draw the options first, then build the one that fits you.
 
-## Adding shadcn components
+## Contact
 
-`ui.shadcn.com` is reachable from normal machines, so `pnpm dlx shadcn@latest add <name>` works with the committed `components.json`.
+Have a project in mind? Write to [office@ergodic.sk](mailto:office@ergodic.sk) or use the form at [ergodic.sk](https://ergodic.sk/#contact).
 
-## Deploy
+Found a bug or a typo on the site? Open an issue here.
 
-Vercel, region `fra1` (`vercel.json`).
+## Company
+
+Ergodic s. r. o.
+Bauerova 1205/7, 040 23 Košice, Slovakia
+IČO 57859892 · DIČ 2123319803
+Zapísaná v OR Mestského súdu Košice, oddiel Sro, vložka č. 67484/V
+
+---
+
+<sub>© Ergodic s. r. o. All rights reserved. See [LICENSE](LICENSE). Notes for working on the site are in [docs/development.md](docs/development.md).</sub>
