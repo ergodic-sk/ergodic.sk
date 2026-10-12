@@ -4,7 +4,9 @@ import { Analytics } from "@vercel/analytics/next"
 import { NextIntlClientProvider } from "next-intl"
 import { getLocale, getTranslations } from "next-intl/server"
 import { ClickTracker } from "@/components/site/click-tracker"
+import { RevealObserver } from "@/components/site/reveal-observer"
 import { site } from "@/config/site"
+import { revealBootScript } from "@/lib/reveal"
 import { routing } from "@/i18n/routing"
 import "../globals.css"
 
@@ -53,11 +55,19 @@ export default async function LocaleLayout({ children }: LayoutProps<"/[locale]"
   const locale = await getLocale()
 
   return (
-    <html lang={locale} className={`${instrumentSans.variable} ${plexMono.variable}`}>
+    <html
+      lang={locale}
+      className={`${instrumentSans.variable} ${plexMono.variable}`}
+      suppressHydrationWarning
+    >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: revealBootScript }} />
+      </head>
       <body>
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
         <div className="grain" aria-hidden="true" />
         <ClickTracker />
+        <RevealObserver />
         <Analytics />
       </body>
     </html>

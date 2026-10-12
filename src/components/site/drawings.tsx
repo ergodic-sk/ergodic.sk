@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl"
+import { base, delay } from "@/lib/reveal"
 import { Container, SheetHeading } from "./sheet-heading"
 
 type Drawing = {
@@ -17,7 +18,11 @@ const drawings: Drawing[] = [
 
 const path = (y: number) => `M40 100 C 150 100, 220 ${y}, 360 ${y}`
 
+/** Same story as the hero, plotted once: considered variants are sketched, then the chosen one is drawn. */
 function Study({ ends, chosen }: Pick<Drawing, "ends" | "chosen">) {
+  const sketch = (i: number) => delay(200 + i * 70)
+  const done = 450 + ends.length * 70 + 650
+
   return (
     <svg
       viewBox="0 0 400 200"
@@ -33,14 +38,31 @@ function Study({ ends, chosen }: Pick<Drawing, "ends" | "chosen">) {
         strokeLinecap="round"
         strokeDasharray="0 8"
       >
-        {ends.map((y, i) => (i === chosen ? null : <path key={y} d={path(y)} />))}
+        {ends.map((y, i) =>
+          i === chosen ? null : <path key={y} className="r-fade" style={sketch(i)} d={path(y)} />
+        )}
       </g>
-      <path d={path(ends[chosen])} fill="none" stroke="var(--cobalt)" strokeWidth="3.5" strokeLinecap="round" />
-      <circle cx="40" cy="100" r="5" fill="var(--cobalt)" />
-      <circle cx="360" cy={ends[chosen]} r="7" fill="var(--signal)" />
+      <path
+        className="r-draw"
+        pathLength={1}
+        style={{ ...delay(450 + ends.length * 70), "--dur": "650ms" } as React.CSSProperties}
+        d={path(ends[chosen])}
+        fill="none"
+        stroke="var(--cobalt)"
+        strokeWidth="3.5"
+        strokeLinecap="round"
+      />
+      <circle className="r-pop" style={delay(100)} cx="40" cy="100" r="5" fill="var(--cobalt)" />
+      <circle className="r-pop" style={delay(done)} cx="360" cy={ends[chosen]} r="7" fill="var(--signal)" />
       <g fontFamily="var(--font-mono)" fontSize="10" letterSpacing="1" fill="var(--cobalt)">
         {ends.map((y, i) => (
-          <text key={y} x={i === chosen ? 370 : 366} y={y + 4}>
+          <text
+            key={y}
+            className="r-fade"
+            style={i === chosen ? delay(done) : sketch(i)}
+            x={i === chosen ? 370 : 366}
+            y={y + 4}
+          >
             V.0{i + 1}
           </text>
         ))}
@@ -62,8 +84,13 @@ export function Drawings() {
           aside={<p className="text-ink-soft max-w-[380px] text-[17px] leading-normal">{t("lead")}</p>}
         />
         <ul className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {drawings.map(({ id, code, ends, chosen }) => (
-            <li key={id} className="border-cobalt bg-paper-2 flex flex-col border">
+          {drawings.map(({ id, code, ends, chosen }, i) => (
+            <li
+              key={id}
+              data-reveal
+              style={base(i * 120)}
+              className="r-up border-cobalt bg-paper-2 flex flex-col border"
+            >
               <Study ends={ends} chosen={chosen} />
               <div className="flex flex-col gap-3 p-5">
                 <div className="font-mono-caps text-cobalt flex justify-between text-[11px] tracking-[0.08em]">

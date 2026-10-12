@@ -1,29 +1,54 @@
 import Image from "next/image"
 import { useTranslations } from "next-intl"
 import { site } from "@/config/site"
+import { delay } from "@/lib/reveal"
 import { Container } from "./sheet-heading"
+
+const draw = (ms: number, dur = 600) => ({ ...delay(ms), "--dur": `${dur}ms` }) as React.CSSProperties
 
 /** 240×320 photo frame drawn with dimension lines; shows a placeholder cross until a photo is set. */
 function PhotoFrame({ alt }: { alt: string }) {
   return (
-    <div className="relative h-[380px] w-[300px] shrink-0">
+    <div data-reveal className="relative h-[380px] w-[300px] shrink-0">
       <svg viewBox="0 0 300 380" aria-hidden="true" className="absolute inset-0">
-        <rect x="20" y="20" width="240" height="320" fill="var(--paper-2)" stroke="var(--cobalt)" strokeWidth="1.2" />
+        <rect
+          className="r-fade"
+          style={delay(500)}
+          x="20"
+          y="20"
+          width="240"
+          height="320"
+          fill="var(--paper-2)"
+        />
+        <rect
+          className="r-draw"
+          pathLength={1}
+          style={draw(100, 1000)}
+          x="20"
+          y="20"
+          width="240"
+          height="320"
+          fill="none"
+          stroke="var(--cobalt)"
+          strokeWidth="1.2"
+        />
         {!site.founderPhoto && (
           <g stroke="var(--cobalt)" strokeOpacity="0.35" strokeWidth="1">
-            <line x1="20" y1="20" x2="260" y2="340" />
-            <line x1="260" y1="20" x2="20" y2="340" />
+            <line className="r-draw" pathLength={1} style={draw(800)} x1="20" y1="20" x2="260" y2="340" />
+            <line className="r-draw" pathLength={1} style={draw(900)} x1="260" y1="20" x2="20" y2="340" />
           </g>
         )}
         <g stroke="var(--cobalt)" strokeWidth="1">
-          <line x1="20" y1="356" x2="260" y2="356" />
-          <line x1="20" y1="350" x2="20" y2="362" />
-          <line x1="260" y1="350" x2="260" y2="362" />
-          <line x1="276" y1="20" x2="276" y2="340" />
-          <line x1="270" y1="20" x2="282" y2="20" />
-          <line x1="270" y1="340" x2="282" y2="340" />
+          <g className="r-fade" style={delay(1000)}>
+            <line x1="20" y1="350" x2="20" y2="362" />
+            <line x1="260" y1="350" x2="260" y2="362" />
+            <line x1="270" y1="20" x2="282" y2="20" />
+            <line x1="270" y1="340" x2="282" y2="340" />
+          </g>
+          <line className="r-draw" pathLength={1} style={draw(1050, 500)} x1="20" y1="356" x2="260" y2="356" />
+          <line className="r-draw" pathLength={1} style={draw(1050, 500)} x1="276" y1="20" x2="276" y2="340" />
         </g>
-        <g fontFamily="var(--font-mono)" fontSize="10" fill="var(--cobalt)">
+        <g className="r-fade" style={delay(1450)} fontFamily="var(--font-mono)" fontSize="10" fill="var(--cobalt)">
           <text x="124" y="374">240</text>
           <text x="284" y="184">320</text>
         </g>
@@ -34,7 +59,8 @@ function PhotoFrame({ alt }: { alt: string }) {
           alt={alt}
           width={240}
           height={320}
-          className="absolute top-5 left-5 h-80 w-60 object-cover grayscale"
+          style={delay(600)}
+          className="r-fade absolute top-5 left-5 h-80 w-60 object-cover grayscale"
         />
       )}
     </div>
@@ -54,13 +80,13 @@ export function Studio() {
     <section id="studio" className="sheet-paper py-20 md:py-24">
       <Container className="flex flex-col gap-12 md:flex-row md:gap-18">
         <PhotoFrame alt={t("photoAlt")} />
-        <div className="flex max-w-[640px] flex-col gap-4.5">
-          <p className="font-mono-caps text-cobalt text-xs tracking-[0.1em]">{t("eyebrow")}</p>
-          <h2 className="text-cobalt text-4xl leading-none font-semibold tracking-[-0.05em] md:text-[52px]">
+        <div data-reveal className="flex max-w-[640px] flex-col gap-4.5">
+          <p className="r-up font-mono-caps text-cobalt text-xs tracking-[0.1em]">{t("eyebrow")}</p>
+          <h2 style={delay(70)} className="r-up text-cobalt text-4xl leading-none font-semibold tracking-[-0.05em] md:text-[52px]">
             {t("title")}
           </h2>
-          <p className="text-ink-soft text-[17px] leading-relaxed md:text-[19px]">{t("body")}</p>
-          <dl className="border-cobalt font-mono-caps grid border text-[11px] tracking-[0.06em] sm:grid-cols-3">
+          <p style={delay(140)} className="r-up text-ink-soft text-[17px] leading-relaxed md:text-[19px]">{t("body")}</p>
+          <dl style={delay(210)} className="r-up border-cobalt font-mono-caps grid border text-[11px] tracking-[0.06em] sm:grid-cols-3">
             {facts.map(([k, v], i) => (
               <div
                 key={k}

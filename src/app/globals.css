@@ -80,6 +80,12 @@
   --radius-sm: var(--radius);
   --radius-md: var(--radius);
   --radius-lg: var(--radius);
+
+  /* Stronger curves than the CSS defaults; these also replace Tailwind's ease-out / ease-in-out. */
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-in-out: cubic-bezier(0.77, 0, 0.175, 1);
+  --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
+  --ease-draw: cubic-bezier(0.65, 0, 0.35, 1);
 }
 
 @layer base {
@@ -87,6 +93,7 @@
     @apply border-border outline-ring/50;
   }
   html {
+    -webkit-tap-highlight-color: transparent;
     scroll-behavior: smooth;
     /* Keep anchored sections clear of the sticky header (h-16 / md:h-24). */
     scroll-padding-top: 4rem;
@@ -104,8 +111,19 @@
   body {
     @apply bg-background text-foreground font-sans antialiased;
   }
-  a:hover {
-    color: var(--signal);
+  a,
+  button,
+  label,
+  [role="button"] {
+    touch-action: manipulation;
+  }
+  a {
+    transition: color 150ms ease;
+  }
+  @media (hover: hover) and (pointer: fine) {
+    a:hover {
+      color: var(--signal);
+    }
   }
   ::selection {
     background: var(--signal);
@@ -150,8 +168,10 @@
 
 /* Hero path study: 11 s loop. Pencil variants, then the chosen path is built
    and its wall rises. */
+/* Dash 1, gap 2 on a pathLength of 1: hidden at offset 1 without a leftover
+   round cap at the end of the path. */
 .ps-pencil {
-  stroke-dasharray: 1;
+  stroke-dasharray: 1 2;
   stroke-dashoffset: 1;
   animation: ps-pencil 11s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
@@ -160,7 +180,7 @@
   animation: ps-dots 11s linear infinite;
 }
 .ps-chosen {
-  stroke-dasharray: 1;
+  stroke-dasharray: 1 2;
   stroke-dashoffset: 1;
   animation: ps-build 11s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
@@ -251,5 +271,96 @@
   .ps-lbl {
     animation: none;
     opacity: 0.3;
+  }
+}
+
+/* Mobile hero fan: the same story as the path study, on an 11 s loop.
+   Variants are sketched one by one, then the chosen path is built. */
+.pf-variant {
+  opacity: 0;
+  animation: pf-variant 11s linear infinite;
+}
+@keyframes pf-variant {
+  0%, 4% { opacity: 0; }
+  12% { opacity: 0.75; }
+  40% { opacity: 0.75; }
+  52% { opacity: 0.3; }
+  88% { opacity: 0.3; }
+  95%, 100% { opacity: 0; }
+}
+
+/* The loops stop while the hero is off screen. */
+[data-offscreen] :is(.ps-pencil, .ps-dots, .ps-chosen, .ps-wall, .ps-endpt, .ps-lbl, .ps-lblc, .pf-variant) {
+  animation-play-state: paused;
+}
+
+/* Scroll reveals. Each sheet is plotted once when it scrolls into view.
+   html[data-motion] is set by an inline script before first paint, so without
+   JavaScript nothing is hidden. RevealObserver adds data-inview to [data-reveal]
+   blocks. Delays: --base on a block (e.g. a card), --d on an element, in ms. */
+html[data-motion] .r-up {
+  transition-property: opacity, translate;
+  transition-duration: 700ms;
+  transition-timing-function: var(--ease-out);
+}
+html[data-motion] .r-fade {
+  transition: opacity 600ms ease;
+}
+html[data-motion] .r-pop {
+  transform-box: fill-box;
+  transform-origin: center;
+  transition-property: opacity, scale;
+  transition-duration: 450ms;
+  transition-timing-function: var(--ease-out);
+}
+html[data-motion] .r-draw {
+  stroke-dasharray: 1 2;
+  transition: stroke-dashoffset var(--dur, 700ms) var(--ease-draw);
+}
+html[data-motion] .r-rule {
+  transform-origin: left;
+  transition: scale 900ms var(--ease-in-out);
+}
+html[data-motion] :is(.r-up, .r-fade, .r-pop, .r-draw, .r-rule) {
+  transition-delay: calc(var(--base, 0ms) + var(--d, 0ms));
+}
+
+/* Hidden until the block (the element itself or an ancestor) is in view. */
+html[data-motion] :is([data-reveal]:not([data-inview]), [data-reveal]:not([data-inview]) *) {
+  &.r-up {
+    opacity: 0;
+    translate: 0 14px;
+  }
+  &.r-fade {
+    opacity: 0;
+  }
+  &.r-pop {
+    opacity: 0;
+    scale: 0.5;
+  }
+  &.r-draw {
+    stroke-dashoffset: 1;
+  }
+  &.r-rule {
+    scale: 0 1;
+  }
+}
+
+/* Reduced motion: no movement and no drawing, only a short fade. */
+@media (prefers-reduced-motion: reduce) {
+  html[data-motion] :is(.r-up, .r-fade, .r-pop, .r-draw, .r-rule) {
+    transition: opacity 300ms ease;
+  }
+  html[data-motion] :is([data-reveal]:not([data-inview]), [data-reveal]:not([data-inview]) *) {
+    &:is(.r-up, .r-pop, .r-draw, .r-rule) {
+      opacity: 0;
+      translate: none;
+      scale: none;
+      stroke-dashoffset: 0;
+    }
+  }
+  .pf-variant {
+    animation: none;
+    opacity: 0.4;
   }
 }
