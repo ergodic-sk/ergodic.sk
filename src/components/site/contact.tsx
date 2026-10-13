@@ -26,7 +26,11 @@ export function Contact() {
               {site.email}
             </a>
             {site.phone && (
-              <a href={`tel:${site.phone.replace(/\s/g, "")}`} className="no-underline">
+              <a
+                href={`tel:${site.phone.replace(/\s/g, "")}`}
+                {...trackAttrs("phone_click", { location: "contact" })}
+                className="no-underline"
+              >
                 {site.phone}
               </a>
             )}

@@ -4,7 +4,7 @@ export const site = {
   name: "Ergodic",
   legalName: "Ergodic s. r. o.",
   email: "office@ergodic.sk",
-  phone: null as string | null,
+  phone: "+421 950 613 925" as string | null,
   address: "Bauerova 1205/7, 040 23 Košice",
   ico: "57859892",
   dic: "2123319803",

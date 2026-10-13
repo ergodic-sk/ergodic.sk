@@ -11,6 +11,7 @@ export type AnalyticsEvent =
   | "brief_submit"
   | "brief_invalid"
   | "contact_email_click"
+  | "phone_click"
   | "heystol_click"
   | "linkedin_click"
 
