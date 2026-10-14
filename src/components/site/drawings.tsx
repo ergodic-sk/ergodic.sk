@@ -1,19 +1,22 @@
 import { useTranslations } from "next-intl"
+import { trackAttrs } from "@/lib/analytics"
 import { base, delay } from "@/lib/reveal"
 import { Container, SheetHeading } from "./sheet-heading"
 
 type Drawing = {
-  id: "dwg002" | "dwg003" | "dwg004"
+  id: "kromka" | "zwicker" | "qrplatby"
   code: string
+  url: string
   // End y of each considered variant; the chosen one is drawn solid.
   ends: number[]
   chosen: number
 }
 
+// Projects from denysov.dev. Variant counts and the chosen variant are illustrative until confirmed.
 const drawings: Drawing[] = [
-  { id: "dwg002", code: "DWG 002", ends: [40, 78, 140, 170], chosen: 1 },
-  { id: "dwg003", code: "DWG 003", ends: [30, 70, 100, 136, 170], chosen: 3 },
-  { id: "dwg004", code: "DWG 004", ends: [50, 100, 150], chosen: 1 },
+  { id: "kromka", code: "DWG 002", url: "https://www.pekarenkromka.sk", ends: [40, 78, 140, 170], chosen: 1 },
+  { id: "zwicker", code: "DWG 003", url: "https://www.zwicker.sk", ends: [30, 70, 100, 136, 170], chosen: 3 },
+  { id: "qrplatby", code: "DWG 004", url: "https://qr-platby.com", ends: [50, 100, 150], chosen: 1 },
 ]
 
 const path = (y: number) => `M40 100 C 150 100, 220 ${y}, 360 ${y}`
@@ -84,7 +87,7 @@ export function Drawings() {
           aside={<p className="text-ink-soft max-w-[380px] text-[17px] leading-normal">{t("lead")}</p>}
         />
         <ul className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {drawings.map(({ id, code, ends, chosen }, i) => (
+          {drawings.map(({ id, code, url, ends, chosen }, i) => (
             <li
               key={id}
               data-reveal
@@ -97,7 +100,17 @@ export function Drawings() {
                   <span>{code}</span>
                   <span>{t(`items.${id}.kind`)}</span>
                 </div>
-                <h3 className="text-[26px] font-semibold tracking-[-0.03em]">{t(`items.${id}.client`)}</h3>
+                <h3 className="text-[26px] font-semibold tracking-[-0.03em]">
+                  <a
+                    href={url}
+                    target="_blank"
+                    rel="noopener"
+                    {...trackAttrs("case_click", { location: "drawings", target: id })}
+                    className="no-underline"
+                  >
+                    {t(`items.${id}.client`)} <span className="text-cobalt text-lg">↗</span>
+                  </a>
+                </h3>
                 <dl className="font-mono-caps text-ink-soft grid grid-cols-2 gap-y-2 text-[11px] tracking-[0.04em]">
                   <dt>{t("considered")}</dt>
                   <dd>{t("variants", { count: ends.length })}</dd>

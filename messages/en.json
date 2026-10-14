@@ -98,23 +98,23 @@
     "outcome": "Outcome",
     "variants": "{count, plural, one {# variant} other {# variants}}",
     "items": {
-      "dwg002": {
+      "kromka": {
         "kind": "E-shop",
-        "client": "[Client name]",
-        "stack": "[stack]",
-        "result": "[result]"
+        "client": "Pekáreň Kromka",
+        "stack": "Next.js · PostgreSQL",
+        "result": "Custom CRM and ERP integration"
       },
-      "dwg003": {
-        "kind": "Restaurant web",
-        "client": "[Client name]",
-        "stack": "[stack]",
-        "result": "[result]"
+      "zwicker": {
+        "kind": "Restaurant & guesthouse",
+        "client": "Zwicker",
+        "stack": "Next.js · Payload CMS",
+        "result": "Multilingual site with its own CMS"
       },
-      "dwg004": {
-        "kind": "Mobile app",
-        "client": "[Client name]",
-        "stack": "[stack]",
-        "result": "[result]"
+      "qrplatby": {
+        "kind": "Web app",
+        "client": "QR Platby",
+        "stack": "Next.js · Vercel",
+        "result": "SEPA QR payments for Slovak small businesses"
       }
     }
   },
