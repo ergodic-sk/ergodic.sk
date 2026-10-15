@@ -110,11 +110,11 @@
         "stack": "Next.js · Payload CMS",
         "result": "Multilingual site with its own CMS"
       },
-      "qrplatby": {
-        "kind": "Web app",
-        "client": "QR Platby",
-        "stack": "Next.js · Vercel",
-        "result": "SEPA QR payments for Slovak small businesses"
+      "heystol": {
+        "kind": "Restaurant bookings",
+        "client": "heystol",
+        "stack": "Web · Stripe",
+        "result": "Guests prepay, money goes straight to the venue"
       }
     }
   },

@@ -110,11 +110,11 @@
         "stack": "Next.js · Payload CMS",
         "result": "Viacjazyčný web s vlastným CMS"
       },
-      "qrplatby": {
-        "kind": "Webová aplikácia",
-        "client": "QR Platby",
-        "stack": "Next.js · Vercel",
-        "result": "SEPA QR platby pre malé firmy na Slovensku"
+      "heystol": {
+        "kind": "Rezervácie pre podniky",
+        "client": "heystol",
+        "stack": "Web · Stripe",
+        "result": "Hostia platia vopred, peniaze idú priamo podniku"
       }
     }
   },

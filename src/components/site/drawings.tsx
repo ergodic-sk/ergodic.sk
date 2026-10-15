@@ -1,10 +1,11 @@
 import { useTranslations } from "next-intl"
+import { site } from "@/config/site"
 import { trackAttrs } from "@/lib/analytics"
 import { base, delay } from "@/lib/reveal"
 import { Container, SheetHeading } from "./sheet-heading"
 
 type Drawing = {
-  id: "kromka" | "zwicker" | "qrplatby"
+  id: "kromka" | "zwicker" | "heystol"
   code: string
   url: string
   // End y of each considered variant; the chosen one is drawn solid.
@@ -12,11 +13,11 @@ type Drawing = {
   chosen: number
 }
 
-// Projects from denysov.dev. Variant counts and the chosen variant are illustrative until confirmed.
+// Client projects from denysov.dev plus our own heystol. Variant counts and the chosen variant are illustrative until confirmed.
 const drawings: Drawing[] = [
   { id: "kromka", code: "DWG 002", url: "https://www.pekarenkromka.sk", ends: [40, 78, 140, 170], chosen: 1 },
   { id: "zwicker", code: "DWG 003", url: "https://www.zwicker.sk", ends: [30, 70, 100, 136, 170], chosen: 3 },
-  { id: "qrplatby", code: "DWG 004", url: "https://qr-platby.com", ends: [50, 100, 150], chosen: 1 },
+  { id: "heystol", code: "DWG 004", url: site.heystol, ends: [50, 100, 150], chosen: 1 },
 ]
 
 const path = (y: number) => `M40 100 C 150 100, 220 ${y}, 360 ${y}`
