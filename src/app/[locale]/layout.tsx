@@ -37,6 +37,8 @@ export async function generateMetadata(): Promise<Metadata> {
       canonical: locale === routing.defaultLocale ? "/" : `/${locale}`,
       languages: { sk: "/", en: "/en", "x-default": "/" },
     },
+    // iOS Safari otherwise turns digit runs (IČO, DIČ, phone) into links before hydration, which breaks it.
+    formatDetection: { telephone: false, date: false, address: false, email: false },
     openGraph: {
       type: "website",
       siteName: site.name,
