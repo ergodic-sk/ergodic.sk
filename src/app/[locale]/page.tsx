@@ -7,6 +7,7 @@ import { Services } from "@/components/site/services"
 import { SiteHeader } from "@/components/site/site-header"
 import { SiteFooter } from "@/components/site/site-footer"
 import { Studio } from "@/components/site/studio"
+import { site } from "@/config/site"
 
 export default function HomePage() {
   return (
@@ -18,7 +19,7 @@ export default function HomePage() {
         <Services />
         <Drawings />
         <Products />
-        <Studio />
+        {site.showStudio && <Studio />}
         <Contact />
       </main>
       <SiteFooter />
