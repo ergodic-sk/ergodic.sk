@@ -121,8 +121,16 @@
   "Products": {
     "eyebrow": "List 05 · Produkty",
     "title": "Naše vlastné výkresy.",
-    "tag": "P-01 · Reštaurácie",
-    "body": "Rezervácie a predplatené podujatia so vstupenkami pre reštaurácie. Hostia platia pri rezervácii a peniaze idú priamo na účet reštaurácie."
+    "items": {
+      "heystol": {
+        "tag": "P-01 · Reštaurácie",
+        "body": "Rezervácie a predplatené podujatia so vstupenkami pre reštaurácie. Hostia platia pri rezervácii a peniaze idú priamo na účet reštaurácie."
+      },
+      "okfaktura": {
+        "tag": "P-02 · Agentúry a dodávatelia",
+        "body": "Mesačná fakturácia medzi agentúrami a ich dodávateľmi. Dodávateľ potvrdí predvyplnený návrh, IBAN a DPH údaje sa skontrolujú pred vystavením a účtovníctvo dostane raz mesačne jeden ZIP s PDF, XML a CSV."
+      }
+    }
   },
   "Studio": {
     "eyebrow": "List 06 · Štúdio",
@@ -168,7 +176,8 @@
   "Footer": {
     "privacy": "Ochrana osobných údajov",
     "linkedin": "LinkedIn",
-    "heystol": "heystol"
+    "heystol": "heystol",
+    "okfaktura": "okfaktura"
   },
   "Privacy": {
     "eyebrow": "Ochrana osobných údajov",

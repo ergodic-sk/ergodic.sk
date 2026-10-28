@@ -33,6 +33,14 @@ export function SiteFooter() {
             >
               {t("heystol")}
             </a>
+            <a
+              href={site.okfaktura}
+              target="_blank"
+              rel="noopener"
+              {...trackAttrs("okfaktura_click", { location: "footer" })}
+            >
+              {t("okfaktura")}
+            </a>
           </nav>
         </div>
         <p className="text-lilac-400 font-mono text-[11px] leading-[1.7] tracking-[0.04em]">

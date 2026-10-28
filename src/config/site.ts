@@ -12,6 +12,7 @@ export const site = {
     "Zapísaná v OR Mestského súdu Košice, oddiel Sro, vložka č. 67484/V",
   linkedin: null as string | null,
   heystol: "https://heystol.com",
+  okfaktura: "https://okfaktura.sk",
   founderPhoto: null as string | null,
   // The founder section (#studio) is hidden for now; set to true to bring it and its nav item back.
   showStudio: false,

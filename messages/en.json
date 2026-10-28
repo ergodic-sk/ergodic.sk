@@ -121,8 +121,16 @@
   "Products": {
     "eyebrow": "Sheet 05 · Products",
     "title": "Our own drawings.",
-    "tag": "P-01 · Restaurants",
-    "body": "Reservations and prepaid ticketed events for restaurants. Guests pay when they book, and the money goes straight to the restaurant’s own account."
+    "items": {
+      "heystol": {
+        "tag": "P-01 · Restaurants",
+        "body": "Reservations and prepaid ticketed events for restaurants. Guests pay when they book, and the money goes straight to the restaurant’s own account."
+      },
+      "okfaktura": {
+        "tag": "P-02 · Agencies & suppliers",
+        "body": "Monthly invoicing between agencies and their suppliers. Suppliers confirm a prefilled draft, IBAN and VAT details are checked before issue, and accounting gets one ZIP a month with PDF, XML and CSV."
+      }
+    }
   },
   "Studio": {
     "eyebrow": "Sheet 06 · Studio",
@@ -168,7 +176,8 @@
   "Footer": {
     "privacy": "Ochrana osobných údajov",
     "linkedin": "LinkedIn",
-    "heystol": "heystol"
+    "heystol": "heystol",
+    "okfaktura": "okfaktura"
   },
   "Privacy": {
     "eyebrow": "Ochrana osobných údajov",
