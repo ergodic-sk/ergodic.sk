@@ -2,6 +2,7 @@ import { useTranslations } from "next-intl"
 import { site } from "@/config/site"
 import { Link } from "@/i18n/navigation"
 import { trackAttrs } from "@/lib/analytics"
+import { withUtm } from "@/lib/utm"
 import { Wordmark } from "./logo"
 import { Container } from "./sheet-heading"
 
@@ -26,7 +27,7 @@ export function SiteFooter() {
               </a>
             )}
             <a
-              href={site.heystol}
+              href={withUtm(site.heystol, "footer")}
               target="_blank"
               rel="noopener"
               {...trackAttrs("heystol_click", { location: "footer" })}
@@ -34,7 +35,7 @@ export function SiteFooter() {
               {t("heystol")}
             </a>
             <a
-              href={site.okfaktura}
+              href={withUtm(site.okfaktura, "footer")}
               target="_blank"
               rel="noopener"
               {...trackAttrs("okfaktura_click", { location: "footer" })}

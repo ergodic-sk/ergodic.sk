@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl"
 import { site } from "@/config/site"
 import { trackAttrs } from "@/lib/analytics"
+import { withUtm } from "@/lib/utm"
 import { base, delay } from "@/lib/reveal"
 import { Container, SheetHeading } from "./sheet-heading"
 
@@ -103,7 +104,7 @@ export function Drawings() {
                 </div>
                 <h3 className="text-[26px] font-semibold tracking-[-0.03em]">
                   <a
-                    href={url}
+                    href={withUtm(url, "drawings")}
                     target="_blank"
                     rel="noopener"
                     {...trackAttrs("case_click", { location: "drawings", target: id })}

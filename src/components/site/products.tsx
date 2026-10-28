@@ -1,6 +1,7 @@
 import { useTranslations } from "next-intl"
 import { site } from "@/config/site"
 import { trackAttrs } from "@/lib/analytics"
+import { withUtm } from "@/lib/utm"
 import { delay } from "@/lib/reveal"
 import { Container, SheetHeading } from "./sheet-heading"
 
@@ -127,7 +128,7 @@ export function Products() {
                 <h3 className="text-5xl leading-none font-bold tracking-[-0.05em]">{id}</h3>
                 <p className="text-lilac-200 text-lg leading-[1.55]">{t(`items.${id}.body`)}</p>
                 <a
-                  href={url}
+                  href={withUtm(url, "products")}
                   target="_blank"
                   rel="noopener"
                   {...trackAttrs(event, { location: "products" })}
