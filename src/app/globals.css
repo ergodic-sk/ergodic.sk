@@ -12,6 +12,8 @@
   --ink-soft: #33375a;
   --ink-mute: #4b4f6e;
   --signal: #ff7a3d;
+  /* Signal dark enough for text on white (form errors). */
+  --signal-ink: #c2410c;
   --lilac-100: #dadcf8;
   --lilac-200: #d5d8f8;
   --lilac-300: #c9ccf7;
@@ -52,6 +54,7 @@
   --color-ink-soft: var(--ink-soft);
   --color-ink-mute: var(--ink-mute);
   --color-signal: var(--signal);
+  --color-signal-ink: var(--signal-ink);
   --color-lilac-100: var(--lilac-100);
   --color-lilac-200: var(--lilac-200);
   --color-lilac-300: var(--lilac-300);

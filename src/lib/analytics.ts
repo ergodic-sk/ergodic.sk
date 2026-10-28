@@ -14,6 +14,7 @@ export type AnalyticsEvent =
   | "phone_click"
   | "case_click"
   | "heystol_click"
+  | "okfaktura_click"
   | "linkedin_click"
 
 type Props = Record<string, string | number | boolean | null>

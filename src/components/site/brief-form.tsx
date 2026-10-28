@@ -13,10 +13,10 @@ import { briefMailto, invalidFields, needs, type BriefField, type Need } from "@
 import { trackEvent } from "@/lib/analytics"
 import { cn } from "@/lib/utils"
 
-const cell = "border-paper/30 flex flex-col gap-2 px-4.5 py-4"
-const label = "font-mono-caps text-lilac-300 text-[11px] font-normal tracking-[0.08em]"
+const cell = "border-ink/12 flex flex-col gap-2 px-4.5 py-4"
+const label = "font-mono-caps text-cobalt text-[11px] font-normal tracking-[0.08em]"
 const field =
-  "text-paper placeholder:text-lilac-400 h-auto rounded-none border-0 border-b border-paper/50 bg-transparent px-0 py-1.5 text-lg md:text-lg focus-visible:border-signal focus-visible:ring-0 aria-invalid:border-signal aria-invalid:ring-0"
+  "text-ink placeholder:text-ink-mute/70 h-auto rounded-none border-0 border-b border-ink/25 bg-transparent px-0 py-1.5 text-lg md:text-lg focus-visible:border-cobalt focus-visible:ring-0 aria-invalid:border-signal-ink aria-invalid:ring-0"
 
 export function BriefForm() {
   const t = useTranslations("Brief")
@@ -56,14 +56,14 @@ export function BriefForm() {
     return (
       <div
         role="status"
-        className="border-paper/55 flex min-h-64 flex-col justify-center gap-4 border p-8 transition-[opacity,translate] duration-500 ease-out starting:translate-y-2 starting:opacity-0"
+        className="text-ink flex min-h-64 flex-col justify-center gap-4 bg-white p-8 shadow-[0_24px_60px_-28px_rgb(12_16_51/0.55)] transition-[opacity,translate] duration-500 ease-out starting:translate-y-2 starting:opacity-0"
       >
         <span
           className="bg-signal size-3 rounded-full transition-[opacity,scale] delay-150 duration-400 ease-out starting:scale-50 starting:opacity-0"
           aria-hidden="true"
         />
         <p className="text-2xl font-semibold tracking-[-0.03em] text-balance">{t("success")}</p>
-        <p className="text-lilac-200 text-[15px]">
+        <p className="text-ink-soft text-[15px]">
           {t.rich("successHint", {
             mail: (chunks) => <a href={`mailto:${site.email}`}>{chunks}</a>,
           })}
@@ -79,7 +79,7 @@ export function BriefForm() {
     invalid(name) && (
       <p
         id={errorId(name)}
-        className="text-signal text-sm transition-[opacity,translate] duration-200 ease-out starting:-translate-y-1 starting:opacity-0"
+        className="text-signal-ink text-sm transition-[opacity,translate] duration-200 ease-out starting:-translate-y-1 starting:opacity-0"
       >
         {t(`errors.${name}`)}
       </p>
@@ -89,7 +89,7 @@ export function BriefForm() {
     <form
       onSubmit={handleSubmit}
       noValidate
-      className="border-paper/55 grid grid-cols-1 border md:grid-cols-2"
+      className="text-ink grid grid-cols-1 bg-white shadow-[0_24px_60px_-28px_rgb(12_16_51/0.55)] md:grid-cols-2"
     >
       <div aria-hidden="true" className="absolute -left-[9999px] h-px w-px overflow-hidden">
         <label>
@@ -147,7 +147,7 @@ export function BriefForm() {
               key={need}
               value={need}
               variant="outline"
-              className="border-paper/55 text-paper hover:bg-paper/10 hover:text-paper data-pressed:border-paper data-pressed:bg-paper data-pressed:text-ink h-auto rounded-sm px-3.5 py-2.5 text-[15px] font-normal data-pressed:font-medium"
+              className="border-ink/20 text-ink hover:bg-cobalt/6 hover:text-ink data-pressed:border-cobalt data-pressed:bg-cobalt data-pressed:text-paper h-auto rounded-sm px-3.5 py-2.5 text-[15px] font-normal data-pressed:font-medium"
             >
               {t(`needOptions.${need}`)}
             </ToggleGroupItem>
@@ -190,12 +190,12 @@ export function BriefForm() {
         {fieldError("email")}
       </div>
       <div className={cn(cell, "justify-center gap-3 md:items-end")}>
-        <Button type="submit" variant="paper" size="xl" className="max-md:w-full">
+        <Button type="submit" size="xl" className="max-md:w-full">
           {t("submit")} →
         </Button>
       </div>
 
-      <div className="border-paper/30 text-lilac-300 flex flex-col gap-2 border-t px-4.5 py-3 text-xs md:col-span-2">
+      <div className="border-ink/12 text-ink-mute flex flex-col gap-2 border-t px-4.5 py-3 text-xs md:col-span-2">
         <p>
           {t.rich("consent", {
             link: (chunks) => (
