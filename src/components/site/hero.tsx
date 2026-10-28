@@ -28,7 +28,7 @@ export function Hero() {
   ]
 
   return (
-    <section className="sheet-cobalt relative -mt-16 flex min-h-svh flex-col pt-16 md:-mt-24 md:min-h-[min(900px,100svh)] md:pt-24 max-md:[background-size:24px_24px]">
+    <section data-loop className="sheet-cobalt relative -mt-16 flex min-h-svh flex-col pt-16 md:-mt-24 md:min-h-[min(900px,100svh)] md:pt-24 max-md:[background-size:24px_24px]">
       <SheetFrame />
 
       <Container className="relative flex grow flex-col justify-center gap-10 pt-7 pb-6 md:pb-18 lg:flex-row lg:items-center lg:justify-between">
@@ -64,7 +64,7 @@ export function Hero() {
             <a
               href="#drawings"
               {...trackAttrs("cta_click", { location: "hero", target: "drawings" })}
-              className="text-paper max-md:border-paper/55 inline-flex h-12 items-center justify-center text-base font-medium underline-offset-[5px] max-md:rounded-sm max-md:border max-md:no-underline md:h-auto md:text-[17px] md:underline"
+              className="text-paper max-md:border-paper/55 inline-flex h-12 transition-[color,scale] duration-150 ease-out active:scale-[0.97] items-center justify-center text-base font-medium underline-offset-[5px] max-md:rounded-sm max-md:border max-md:no-underline md:h-auto md:text-[17px] md:underline"
             >
               {t("secondary")}
             </a>

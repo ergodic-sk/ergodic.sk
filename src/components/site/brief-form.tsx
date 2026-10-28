@@ -56,9 +56,12 @@ export function BriefForm() {
     return (
       <div
         role="status"
-        className="border-paper/55 flex min-h-64 flex-col justify-center gap-4 border p-8 md:self-start"
+        className="border-paper/55 flex min-h-64 flex-col justify-center gap-4 border p-8 transition-[opacity,translate] duration-500 ease-out starting:translate-y-2 starting:opacity-0"
       >
-        <span className="bg-signal size-3 rounded-full" aria-hidden="true" />
+        <span
+          className="bg-signal size-3 rounded-full transition-[opacity,scale] delay-150 duration-400 ease-out starting:scale-50 starting:opacity-0"
+          aria-hidden="true"
+        />
         <p className="text-2xl font-semibold tracking-[-0.03em] text-balance">{t("success")}</p>
         <p className="text-lilac-200 text-[15px]">
           {t.rich("successHint", {
@@ -74,7 +77,10 @@ export function BriefForm() {
 
   const fieldError = (name: BriefField) =>
     invalid(name) && (
-      <p id={errorId(name)} className="text-signal text-sm">
+      <p
+        id={errorId(name)}
+        className="text-signal text-sm transition-[opacity,translate] duration-200 ease-out starting:-translate-y-1 starting:opacity-0"
+      >
         {t(`errors.${name}`)}
       </p>
     )
@@ -83,7 +89,7 @@ export function BriefForm() {
     <form
       onSubmit={handleSubmit}
       noValidate
-      className="border-paper/55 grid grow grid-cols-1 border md:grid-cols-2 lg:self-start"
+      className="border-paper/55 grid grid-cols-1 border md:grid-cols-2"
     >
       <div aria-hidden="true" className="absolute -left-[9999px] h-px w-px overflow-hidden">
         <label>

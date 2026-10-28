@@ -119,26 +119,26 @@ export function PathStudy({ labels, className }: { labels: Labels; className?: s
   )
 }
 
-/** Flat fan of paths for small screens: seven considered, one chosen. */
+const fanEnds = [4, 12, 30, 39, 48, 56]
+
+/** Flat fan of paths for small screens: six considered, one chosen and built, on the hero's 11 s loop. */
 export function PathFan({ className }: { className?: string }) {
   return (
     <svg viewBox="0 0 100 60" aria-hidden="true" className={className}>
       <g
         fill="none"
         stroke="var(--paper)"
-        strokeOpacity="0.75"
         strokeWidth="0.9"
         strokeLinecap="round"
         strokeDasharray="0 2.2"
       >
-        <path d="M6 30 C 36 30, 56 4, 94 4" />
-        <path d="M6 30 C 36 30, 56 12, 94 12" />
-        <path d="M6 30 C 36 30, 56 30, 94 30" />
-        <path d="M6 30 C 36 30, 56 39, 94 39" />
-        <path d="M6 30 C 36 30, 56 48, 94 48" />
-        <path d="M6 30 C 36 30, 56 56, 94 56" />
+        {fanEnds.map((y, i) => (
+          <path key={y} className="pf-variant" style={delay(i)} d={`M6 30 C 36 30, 56 ${y}, 94 ${y}`} />
+        ))}
       </g>
       <path
+        className="ps-chosen"
+        pathLength={1}
         d="M6 30 C 36 30, 56 21, 94 21"
         fill="none"
         stroke="var(--paper)"
@@ -146,7 +146,7 @@ export function PathFan({ className }: { className?: string }) {
         strokeLinecap="round"
       />
       <circle cx="6" cy="30" r="1.8" fill="var(--paper)" />
-      <circle cx="94" cy="21" r="2.4" fill="var(--signal)" />
+      <circle className="ps-endpt" cx="94" cy="21" r="2.4" fill="var(--signal)" />
     </svg>
   )
 }

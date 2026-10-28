@@ -98,23 +98,23 @@
     "outcome": "Outcome",
     "variants": "{count, plural, one {# variant} other {# variants}}",
     "items": {
-      "dwg002": {
+      "kromka": {
         "kind": "E-shop",
-        "client": "[Client name]",
-        "stack": "[stack]",
-        "result": "[result]"
+        "client": "Pekáreň Kromka",
+        "stack": "Next.js · PostgreSQL",
+        "result": "Custom CRM and ERP integration"
       },
-      "dwg003": {
-        "kind": "Restaurant web",
-        "client": "[Client name]",
-        "stack": "[stack]",
-        "result": "[result]"
+      "zwicker": {
+        "kind": "Restaurant & guesthouse",
+        "client": "Zwicker",
+        "stack": "Next.js · Payload CMS",
+        "result": "Multilingual site with its own CMS"
       },
-      "dwg004": {
-        "kind": "Mobile app",
-        "client": "[Client name]",
-        "stack": "[stack]",
-        "result": "[result]"
+      "heystol": {
+        "kind": "Restaurant bookings",
+        "client": "heystol",
+        "stack": "Web · Stripe",
+        "result": "Guests prepay, money goes straight to the venue"
       }
     }
   },
@@ -134,7 +134,7 @@
     "firm": "Firm"
   },
   "Contact": {
-    "eyebrow": "Sheet 07 · Contact",
+    "eyebrow": "Sheet {n} · Contact",
     "title": "Tell us where you want to get to.",
     "lead": "We reply within one working day with questions, then send the first drawing of your options."
   },

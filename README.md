@@ -34,7 +34,7 @@ We draw the options first, then build the one that fits you.
 
 ## Contact
 
-Have a project in mind? Write to [office@ergodic.sk](mailto:office@ergodic.sk) or use the form at [ergodic.sk](https://ergodic.sk/#contact).
+Have a project in mind? Write to [office@ergodic.sk](mailto:office@ergodic.sk), call [+421 950 613 925](tel:+421950613925) or use the form at [ergodic.sk](https://ergodic.sk/#contact).
 
 Found a bug or a typo on the site? Open an issue here.
 

@@ -24,7 +24,7 @@ Checks: `pnpm lint`, `pnpm typecheck`, `pnpm build`.
 ## Where content lives
 
 - Copy: `messages/sk.json`, `messages/en.json`
-- Company facts, phone, LinkedIn, founder photo: `src/config/site.ts` (`null` hides the item)
+- Company facts, phone, LinkedIn, founder photo: `src/config/site.ts` (`null` hides the item; `showStudio` turns the founder section on)
 - Privacy notice: `src/content/privacy.ts`
 
 ## Adding shadcn components

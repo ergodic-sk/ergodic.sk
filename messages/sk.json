@@ -98,23 +98,23 @@
     "outcome": "Výsledok",
     "variants": "{count, plural, one {# variant} few {# varianty} other {# variantov}}",
     "items": {
-      "dwg002": {
+      "kromka": {
         "kind": "E-shop",
-        "client": "[Názov klienta]",
-        "stack": "[stack]",
-        "result": "[výsledok]"
+        "client": "Pekáreň Kromka",
+        "stack": "Next.js · PostgreSQL",
+        "result": "Vlastné prepojenie na CRM a ERP"
       },
-      "dwg003": {
-        "kind": "Web reštaurácie",
-        "client": "[Názov klienta]",
-        "stack": "[stack]",
-        "result": "[výsledok]"
+      "zwicker": {
+        "kind": "Reštaurácia a penzión",
+        "client": "Zwicker",
+        "stack": "Next.js · Payload CMS",
+        "result": "Viacjazyčný web s vlastným CMS"
       },
-      "dwg004": {
-        "kind": "Mobilná aplikácia",
-        "client": "[Názov klienta]",
-        "stack": "[stack]",
-        "result": "[výsledok]"
+      "heystol": {
+        "kind": "Rezervácie pre podniky",
+        "client": "heystol",
+        "stack": "Web · Stripe",
+        "result": "Hostia platia vopred, peniaze idú priamo podniku"
       }
     }
   },
@@ -134,7 +134,7 @@
     "firm": "Firma"
   },
   "Contact": {
-    "eyebrow": "List 07 · Kontakt",
+    "eyebrow": "List {n} · Kontakt",
     "title": "Povedzte nám, kam sa chcete dostať.",
     "lead": "Do jedného pracovného dňa sa ozveme s otázkami a potom pošleme prvý výkres vašich možností."
   },
