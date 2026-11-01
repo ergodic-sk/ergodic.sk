@@ -1,4 +1,6 @@
 import { useTranslations } from "next-intl"
+import { servicePath } from "@/content/services"
+import { Link } from "@/i18n/navigation"
 import { base, delay } from "@/lib/reveal"
 import { Container, SheetHeading } from "./sheet-heading"
 
@@ -74,7 +76,7 @@ export function Services() {
                 <span>S-0{i + 1}</span>
                 <span>{t(`items.${key}.tag`)}</span>
               </div>
-              <div className="flex flex-col gap-4 px-5 py-6">
+              <div className="flex grow flex-col gap-4 px-5 py-6">
                 <svg
                   viewBox="0 0 120 84"
                   aria-hidden="true"
@@ -83,7 +85,12 @@ export function Services() {
                 >
                   {icons[key]}
                 </svg>
-                <h3 className="text-2xl font-semibold tracking-[-0.03em]">{t(`items.${key}.title`)}</h3>
+                <h3 className="text-2xl font-semibold tracking-[-0.03em]">
+                  {/* No prefetch: the client router would read the unprefixed SK slug as a locale (see site-footer). */}
+                  <Link href={servicePath[key]} prefetch={false} className="text-paper hover:text-paper no-underline">
+                    {t(`items.${key}.title`)}
+                  </Link>
+                </h3>
                 <p className="text-lilac-200 text-[15px] leading-[1.55]">{t(`items.${key}.body`)}</p>
                 <ul className="font-mono-caps text-lilac-400 text-[11px] leading-[1.8] tracking-[0.04em]">
                   {t(`items.${key}.specs`)
@@ -92,6 +99,13 @@ export function Services() {
                       <li key={line}>{line}</li>
                     ))}
                 </ul>
+                <Link
+                  href={servicePath[key]}
+                  prefetch={false}
+                  className="font-mono-caps text-paper mt-auto text-xs tracking-[0.08em] underline-offset-4"
+                >
+                  {t("more")} →
+                </Link>
               </div>
             </li>
           ))}

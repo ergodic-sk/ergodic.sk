@@ -10,7 +10,8 @@ import { navItems } from "./nav-items"
 import { Container } from "./sheet-heading"
 import { StickyHeader } from "./sticky-header"
 
-export function SiteHeader() {
+/** anchorBase is "" on the home page and the home URL ("/" or "/en") on subpages, so sheet links lead back home. */
+export function SiteHeader({ anchorBase = "" }: { anchorBase?: string }) {
   const t = useTranslations("Nav")
 
   return (
@@ -32,7 +33,7 @@ export function SiteHeader() {
               className="font-mono-caps flex items-center gap-7 text-xs tracking-[0.08em]"
             >
               {navItems.map(({ id, n }) => (
-                <a key={id} href={`#${id}`} className="text-lilac-100 no-underline">
+                <a key={id} href={`${anchorBase}#${id}`} className="text-lilac-100 no-underline">
                   <span className="text-lilac-500">{n}</span> {t(id)}
                 </a>
               ))}
@@ -51,7 +52,7 @@ export function SiteHeader() {
           </div>
 
           <div className="lg:hidden">
-            <MobileNav />
+            <MobileNav anchorBase={anchorBase} />
           </div>
         </Container>
       </header>

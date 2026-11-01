@@ -1,7 +1,7 @@
 {
   "Metadata": {
-    "title": "Ergodic · Softvérové štúdio v Košiciach",
-    "description": "Web, mobilné aplikácie a automatizácia pre firmy na Slovensku a v EÚ. Najprv nakreslíme možnosti, potom postavíme tú, ktorá sedí vám."
+    "title": "Tvorba webov a mobilných aplikácií na mieru · Košice | Ergodic",
+    "description": "Weby, e-shopy, mobilné aplikácie a automatizácia na mieru pre firmy na Slovensku a v EÚ. Najprv varianty s cenou, potom postavíme ten, ktorý sedí vám."
   },
   "Nav": {
     "label": "Listy",
@@ -17,8 +17,7 @@
     "home": "Ergodic, domov"
   },
   "Hero": {
-    "eyebrow": "List 01 · Softvérové štúdio · Košice, SK",
-    "eyebrowShort": "List 01 · Košice, SK",
+    "sheet": "List 01",
     "titleA": "Veľa ciest.",
     "titleB": "Postavíme tú vašu.",
     "lead": "Web, mobilné aplikácie a automatizácia pre firmy na Slovensku aj za hranicami. Najprv nakreslíme možnosti, potom postavíme tú, ktorá sedí vám, nie priemeru.",
@@ -34,7 +33,8 @@
     "caption": "7 zvážených ciest · 1 vybraná",
     "drawingStart": "Štart",
     "drawingChosen": "V.04 · Vybraná",
-    "drawingBuilt": "Postavená"
+    "drawingBuilt": "Postavená",
+    "h1Keyword": "Tvorba webov a aplikácií · Košice"
   },
   "Method": {
     "eyebrow": "List 02 · Metóda",
@@ -87,7 +87,8 @@
         "body": "Hosting, aktualizácie a menšie funkcie každý mesiac, od jedného kontaktu.",
         "specs": "Mesačný plán|Hosting · Monitoring|Jeden kontakt"
       }
-    }
+    },
+    "more": "Viac o službe"
   },
   "Drawings": {
     "eyebrow": "List 04 · Výkresy",
@@ -183,5 +184,18 @@
     "eyebrow": "Ochrana osobných údajov",
     "title": "Ochrana osobných údajov",
     "back": "Späť na web"
+  },
+  "ServicePage": {
+    "home": "Domov",
+    "services": "Služby",
+    "forWho": "Pre koho",
+    "deliverables": "Čo dostanete",
+    "process": "Ako postupujeme",
+    "cases": "Z našich výkresov",
+    "faq": "Časté otázky",
+    "other": "Ďalšie služby",
+    "cta": "Začať projekt",
+    "ctaNote": "Ozveme sa do jedného pracovného dňa.",
+    "footerTitle": "Služby"
   }
 }

@@ -1,5 +1,7 @@
 import { getLocale, getTranslations } from "next-intl/server"
 import { site } from "@/config/site"
+import { serviceKeys, servicePath } from "@/content/services"
+import { getPathname } from "@/i18n/navigation"
 
 // schema.org data for Google: who the company is, where it sits and what it does.
 export async function StructuredData() {
@@ -36,9 +38,14 @@ export async function StructuredData() {
         ],
         knowsLanguage: ["sk", "en"],
         ...(site.linkedin ? { sameAs: [site.linkedin] } : {}),
-        makesOffer: (["web", "mobile", "automation", "care"] as const).map((key) => ({
+        makesOffer: serviceKeys.map((key) => ({
           "@type": "Offer",
-          itemOffered: { "@type": "Service", name: s(`${key}.title`), description: s(`${key}.body`) },
+          itemOffered: {
+            "@type": "Service",
+            name: s(`${key}.title`),
+            description: s(`${key}.body`),
+            url: site.url + getPathname({ locale, href: servicePath[key] }),
+          },
         })),
       },
       {
