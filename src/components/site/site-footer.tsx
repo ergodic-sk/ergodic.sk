@@ -15,7 +15,11 @@ export function SiteFooter() {
         <div className="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
           <Wordmark className="text-2xl" />
           <nav className="text-lilac-100 flex flex-wrap gap-x-7 gap-y-2 text-[15px]">
-            <Link href="/privacy">{t("privacy")}</Link>
+            {/* No prefetch: with SK unprefixed, the client router guesses /privacy is /[locale]=privacy,
+                the segment prefetch 404s and it retries in a loop (hundreds of requests per second). */}
+            <Link href="/privacy" prefetch={false}>
+              {t("privacy")}
+            </Link>
             {site.linkedin && (
               <a
                 href={site.linkedin}
