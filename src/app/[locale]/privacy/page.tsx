@@ -11,12 +11,16 @@ import type { Locale } from "@/i18n/routing"
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale()
   const t = await getTranslations({ locale, namespace: "Privacy" })
+  const title = `${t("title")} · Ergodic`
+  const path = locale === "sk" ? "/privacy" : `/${locale}/privacy`
   return {
-    title: `${t("title")} · Ergodic`,
+    title,
     alternates: {
-      canonical: locale === "sk" ? "/privacy" : `/${locale}/privacy`,
-      languages: { sk: "/privacy", en: "/en/privacy" },
+      canonical: path,
+      languages: { sk: "/privacy", en: "/en/privacy", "x-default": "/privacy" },
     },
+    openGraph: { title, url: path },
+    twitter: { title },
   }
 }
 
