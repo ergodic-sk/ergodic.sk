@@ -199,7 +199,8 @@ export function BriefForm() {
         <p>
           {t.rich("consent", {
             link: (chunks) => (
-              <Link href="/privacy" className="underline underline-offset-2">
+              // No prefetch, see SiteFooter.
+              <Link href="/privacy" prefetch={false} className="underline underline-offset-2">
                 {chunks}
               </Link>
             ),
