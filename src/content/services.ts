@@ -35,9 +35,9 @@ export const serviceCases: Record<ServiceKey, ("kromka" | "zwicker" | "heystol")
 export const services: Record<Locale, Record<ServiceKey, ServiceCopy>> = {
   sk: {
     web: {
-      metaTitle: "Tvorba webov a e-shopov na mieru · Košice | Ergodic",
+      metaTitle: "Tvorba webov a e-shopov na mieru · Slovensko | Ergodic",
       metaDescription:
-        "Weby a e-shopy na mieru pre firmy v Košiciach, na Slovensku a v EÚ. Rýchle na mobile, po slovensky aj po anglicky, s platbami cez Stripe.",
+        "Weby a e-shopy na mieru pre firmy na Slovensku a v EÚ. Rýchle na mobile, po slovensky aj po anglicky, s platbami cez Stripe.",
       h1: "Tvorba webov a e-shopov na mieru",
       lead: "Firemný web, ktorý sa na telefóne načíta hneď, Google mu rozumie a zákazník na ňom nájde, čo hľadal. Po slovensky, po anglicky alebo v ďalších jazykoch.",
       forWho: [
@@ -47,7 +47,7 @@ export const services: Record<Locale, Record<ServiceKey, ServiceCopy>> = {
       ],
       deliverables: [
         "Návrh a vývoj na Next.js alebo Astro. Vyberieme podľa toho, čo web potrebuje.",
-        "Technické SEO od prvého dňa. Rýchlosť, štruktúrované dáta, sitemap a jazykové verzie sú súčasťou stavby, nie doplnok.",
+        "Technické SEO od prvého dňa. Rýchlosť, štruktúrované dáta, sitemap a jazykové verzie riešime už pri stavbe.",
         "Platby cez Stripe a prepojenie na váš CRM, ERP alebo sklad.",
         "Redakčný systém, v ktorom upravíte texty a fotky bez programátora.",
         "Hosting a monitoring po spustení, ak chcete.",
@@ -66,8 +66,8 @@ export const services: Record<Locale, Record<ServiceKey, ServiceCopy>> = {
           a: "Áno. Ak sa obsah mení často, dostanete redakčný systém (napríklad Payload CMS). Texty, fotky aj jazykové verzie v ňom zmeníte sami.",
         },
         {
-          q: "Robíte weby aj pre firmy mimo Košíc?",
-          a: "Áno, po celom Slovensku aj v EÚ. Stretnúť sa dá v Košiciach alebo online, po slovensky aj po anglicky.",
+          q: "Pracujete aj s firmami mimo Slovenska?",
+          a: "Áno, v celej EÚ. Stretnúť sa dá osobne v Košiciach alebo online, po slovensky aj po anglicky.",
         },
         {
           q: "Čo sa s webom deje po spustení?",
@@ -196,7 +196,7 @@ export const services: Record<Locale, Record<ServiceKey, ServiceCopy>> = {
       ],
       deliverables: [
         "Design and build on Next.js or Astro, picked by what the site needs.",
-        "Technical SEO from day one. Speed, structured data, sitemap and language versions are part of the build, not an add-on.",
+        "Technical SEO from day one. Speed, structured data, sitemap and language versions go in during the build.",
         "Stripe payments and links to your CRM, ERP or stock system.",
         "A CMS where you change text and photos without a developer.",
         "Hosting and monitoring after launch, if you want it.",
