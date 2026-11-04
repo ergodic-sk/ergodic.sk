@@ -1,7 +1,7 @@
 {
   "Metadata": {
     "title": "Tvorba webov a mobilných aplikácií na mieru · Slovensko | Ergodic",
-    "description": "Weby, e-shopy, mobilné aplikácie a automatizácia na mieru pre firmy na Slovensku a v EÚ. Najprv varianty s cenou, potom postavíme ten, ktorý sedí vám."
+    "description": "Weby, e-shopy, mobilné aplikácie a automatizácia na mieru pre firmy na Slovensku a v EÚ. Najprv vám ukážeme varianty, potom postavíme ten, ktorý si vyberiete."
   },
   "Nav": {
     "label": "Listy",
@@ -20,8 +20,8 @@
     "sheet": "List 01",
     "titleA": "Veľa ciest.",
     "titleB": "Postavíme tú vašu.",
-    "lead": "Weby, e-shopy, mobilné aplikácie a automatizácia na mieru pre firmy z celého Slovenska aj zo zahraničia. Najprv vám nakreslíme varianty s cenou, potom postavíme ten, ktorý si vyberiete.",
-    "leadShort": "Weby, aplikácie a automatizácia na mieru. Najprv varianty s cenou, potom postavíme ten, ktorý si vyberiete.",
+    "lead": "Weby, e-shopy, mobilné aplikácie a automatizácia na mieru pre firmy z celého Slovenska aj zo zahraničia. Najprv vám ukážeme niekoľko variantov, potom postavíme ten, ktorý si vyberiete.",
+    "leadShort": "Weby, aplikácie a automatizácia na mieru. Najprv varianty, potom postavíme ten, ktorý si vyberiete.",
     "primary": "Začať projekt",
     "secondary": "Pozrieť referencie",
     "scope": "Rozsah",
