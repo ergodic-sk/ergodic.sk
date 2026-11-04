@@ -14,7 +14,7 @@ import { cn } from "@/lib/utils"
 import { LocaleSwitch } from "./locale-switch"
 import { navItems } from "./nav-items"
 
-export function MobileNav() {
+export function MobileNav({ anchorBase = "" }: { anchorBase?: string }) {
   const t = useTranslations("Nav")
   const [open, setOpen] = useState(false)
   const close = () => setOpen(false)
@@ -49,7 +49,7 @@ export function MobileNav() {
           {navItems.map(({ id, n }) => (
             <a
               key={id}
-              href={`#${id}`}
+              href={`${anchorBase}#${id}`}
               onClick={close}
               className="border-paper/20 flex items-baseline gap-3 border-b py-3.5 text-2xl font-semibold tracking-[-0.03em] no-underline"
             >

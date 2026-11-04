@@ -6,12 +6,14 @@ import { Products } from "@/components/site/products"
 import { Services } from "@/components/site/services"
 import { SiteHeader } from "@/components/site/site-header"
 import { SiteFooter } from "@/components/site/site-footer"
+import { StructuredData } from "@/components/site/structured-data"
 import { Studio } from "@/components/site/studio"
 import { site } from "@/config/site"
 
 export default function HomePage() {
   return (
     <>
+      <StructuredData />
       <SiteHeader />
       <main>
         <Hero />

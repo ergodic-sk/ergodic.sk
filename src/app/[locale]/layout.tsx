@@ -44,8 +44,11 @@ export async function generateMetadata(): Promise<Metadata> {
       siteName: site.name,
       title: t("title"),
       description: t("description"),
+      url: locale === routing.defaultLocale ? "/" : `/${locale}`,
       locale: locale === "sk" ? "sk_SK" : "en_GB",
+      alternateLocale: locale === "sk" ? "en_GB" : "sk_SK",
     },
+    twitter: { card: "summary_large_image" },
   }
 }
 

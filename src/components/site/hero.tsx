@@ -33,13 +33,16 @@ export function Hero() {
 
       <Container className="relative flex grow flex-col justify-center gap-10 pt-7 pb-6 md:pb-18 lg:flex-row lg:items-center lg:justify-between">
         <div className="flex grow flex-col gap-5 md:gap-6.5 lg:max-w-[560px] lg:grow-0">
-          <p className="font-mono-caps text-lilac-300 text-[11px] tracking-[0.1em] md:text-[13px]">
-            <span className="md:hidden">{t("eyebrowShort")}</span>
-            <span className="max-md:hidden">{t("eyebrow")}</span>
-          </p>
-          <h1 className="text-[44px] leading-[0.98] font-semibold tracking-[-0.055em] text-balance md:text-7xl md:leading-[0.96] xl:text-[76px]">
-            {t("titleA")} <br className="max-md:hidden" />
-            {t("titleB")}
+          {/* The H1 carries the search phrase in the eyebrow line; the slogan below stays the visual headline. */}
+          <h1 className="flex flex-col gap-5 md:gap-6.5">
+            <span className="font-mono-caps text-lilac-300 text-[11px] font-normal tracking-[0.1em] md:text-[13px]">
+              <span aria-hidden="true">{t("sheet")} · </span>
+              {t("h1Keyword")}
+            </span>
+            <span className="text-[44px] leading-[0.98] font-semibold tracking-[-0.055em] text-balance md:text-7xl md:leading-[0.96] xl:text-[76px]">
+              {t("titleA")} <br className="max-md:hidden" />
+              {t("titleB")}
+            </span>
           </h1>
           <p className="text-lilac-200 max-w-[500px] text-[17px] leading-normal md:text-[19px]">
             <span className="md:hidden">{t("leadShort")}</span>

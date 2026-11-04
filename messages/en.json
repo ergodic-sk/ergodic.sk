@@ -1,7 +1,7 @@
 {
   "Metadata": {
-    "title": "Ergodic · Software studio in Košice",
-    "description": "Web, mobile and automation for businesses in Slovakia and the EU. We draw the options first, then build the one that fits you."
+    "title": "Web and mobile app development in Slovakia | Ergodic",
+    "description": "Websites, e-shops, mobile apps and automation for businesses in Slovakia and the EU. We draw the options with prices first, then build the one that fits you."
   },
   "Nav": {
     "label": "Sheets",
@@ -17,8 +17,7 @@
     "home": "Ergodic, home"
   },
   "Hero": {
-    "eyebrow": "Sheet 01 · Software studio · Košice, SK",
-    "eyebrowShort": "Sheet 01 · Košice, SK",
+    "sheet": "Sheet 01",
     "titleA": "Many paths.",
     "titleB": "We build the one that’s yours.",
     "lead": "Web, mobile and automation for businesses in Slovakia and beyond. We draw the options first, then build the one that fits you, not the average.",
@@ -34,7 +33,8 @@
     "caption": "7 paths considered · 1 chosen",
     "drawingStart": "Start",
     "drawingChosen": "V.04 · Chosen",
-    "drawingBuilt": "Built"
+    "drawingBuilt": "Built",
+    "h1Keyword": "Web and app development · Košice"
   },
   "Method": {
     "eyebrow": "Sheet 02 · Method",
@@ -87,7 +87,8 @@
         "body": "Hosting, updates and small features every month, from one contact.",
         "specs": "Monthly plan|Hosting · Monitoring|One contact"
       }
-    }
+    },
+    "more": "More about this service"
   },
   "Drawings": {
     "eyebrow": "Sheet 04 · Drawings",
@@ -183,5 +184,18 @@
     "eyebrow": "Ochrana osobných údajov",
     "title": "Privacy",
     "back": "Back to the site"
+  },
+  "ServicePage": {
+    "home": "Home",
+    "services": "Services",
+    "forWho": "Who it's for",
+    "deliverables": "What you get",
+    "process": "How we work",
+    "cases": "From our drawings",
+    "faq": "Questions",
+    "other": "Other services",
+    "cta": "Start a project",
+    "ctaNote": "We reply within one working day.",
+    "footerTitle": "Services"
   }
 }
