@@ -51,7 +51,7 @@
       },
       "build": {
         "title": "Stavba",
-        "body": "Vybraný variant staviame po častiach. Priebežnú verziu si pozriete na testovacej adrese, takže pripomienky dávate počas práce, nie až na konci."
+        "body": "Vybraný variant staviame po častiach. Priebežnú verziu si pozriete na testovacej adrese a pripomienky dávate počas práce."
       },
       "maintain": {
         "title": "Správa",
@@ -61,7 +61,7 @@
   },
   "Services": {
     "eyebrow": "List 03 · Služby",
-    "title": "Čo pre vás postavíme.",
+    "title": "Čo kreslíme a staviame.",
     "items": {
       "web": {
         "tag": "Web",

@@ -51,7 +51,7 @@
       },
       "build": {
         "title": "Build",
-        "body": "We build the chosen option in parts. You can check the work in progress on a test link, so your feedback comes along the way, not at the end."
+        "body": "We build the chosen option in parts. You can check the work in progress on a test link and comment as it grows."
       },
       "maintain": {
         "title": "Maintain",
@@ -61,7 +61,7 @@
   },
   "Services": {
     "eyebrow": "Sheet 03 · Services",
-    "title": "What we build for you.",
+    "title": "What we draw and build.",
     "items": {
       "web": {
         "tag": "Web",
