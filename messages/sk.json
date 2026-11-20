@@ -43,7 +43,7 @@
     "steps": {
       "survey": {
         "title": "Prieskum",
-        "body": "Stretneme sa v Košiciach alebo online. Zistíme, čo dnes robíte ručne a čo sa má zmeniť."
+        "body": "Stretneme sa v Košiciach alebo online a prejdeme, čo má projekt vyriešiť, pre koho je a s čím sa má prepojiť."
       },
       "variants": {
         "title": "Varianty",
@@ -65,8 +65,8 @@
     "items": {
       "web": {
         "tag": "Web",
-        "title": "Weby a e-shopy",
-        "body": "Weby a e-shopy, ktoré sa na telefóne načítajú hneď. Po slovensky, po anglicky alebo v ďalších jazykoch.",
+        "title": "Weby a webové aplikácie",
+        "body": "Firemné weby, e-shopy aj aplikácie v prehliadači, napríklad objednávky či rezervácie. Rýchle na telefóne a vo viacerých jazykoch.",
         "specs": "Platby kartou|Viac jazykov|Úpravy bez programátora"
       },
       "mobile": {
@@ -78,7 +78,7 @@
       "automation": {
         "tag": "Automatizácia",
         "title": "Automatizácia a AI",
-        "body": "Prepojíme vaše systémy, aby nikto neprepisoval údaje ručne. AI nasadíme tam, kde chybu hneď vidno.",
+        "body": "Prepojíme vaše systémy, aby nikto neprepisoval údaje ručne. AI použijeme tam, kde ušetrí prácu a jej výstup sa dá skontrolovať.",
         "specs": "API · Integrácie|AI procesy|Interné dashboardy"
       },
       "care": {
@@ -152,7 +152,7 @@
     "companyPlaceholder": "Názov alebo IČO",
     "needs": "Čo potrebujete",
     "needOptions": {
-      "website": "Web",
+      "website": "Web alebo webová aplikácia",
       "eshop": "E-shop",
       "mobile": "Mobilná aplikácia",
       "automation": "Automatizácia",

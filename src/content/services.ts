@@ -44,6 +44,7 @@ export const services: Record<Locale, Record<ServiceKey, ServiceCopy>> = {
         "Firmy, ktorým starý web nič neprináša a nevedia prečo.",
         "Obchody, ktoré prerástli šablónu a potrebujú prepojenie na sklad, CRM alebo ERP.",
         "Reštaurácie, penzióny a služby, ktoré chcú viacjazyčný web a texty si budú meniť samy.",
+        "Firmy, ktoré potrebujú webovú aplikáciu, napríklad objednávky, rezervácie alebo klientsku zónu.",
       ],
       deliverables: [
         "Návrh a vývoj na Next.js alebo Astro. Vyberieme podľa toho, čo web potrebuje.",
@@ -59,7 +60,7 @@ export const services: Record<Locale, Record<ServiceKey, ServiceCopy>> = {
         },
         {
           q: "Ako dlho to trvá?",
-          a: "Staviame v malých vydaniach. Prvú verziu používate skôr, než je hotové všetko, a ďalšie časti pribúdajú postupne.",
+          a: "Záleží na rozsahu. Termín uvidíte pri každom variante spolu s cenou. Staviame po častiach, takže prvú verziu skúšate už počas práce.",
         },
         {
           q: "Budem si môcť web upravovať sám?",
@@ -83,7 +84,7 @@ export const services: Record<Locale, Record<ServiceKey, ServiceCopy>> = {
       lead: "Jedna aplikácia, jeden kód, dva obchody. Píšeme v React Native a Expo, takže nová funkcia príde na iPhone aj Android naraz a vývoj neplatíte dvakrát.",
       forWho: [
         "Firmy, ku ktorým sa zákazníci vracajú pravidelne a web im nestačí. Objednávky, rezervácie, vernostné programy.",
-        "Ľudia v teréne, ktorí potrebujú aplikáciu aj tam, kde nie je signál.",
+        "Firmy s ľuďmi v teréne, ktorí potrebujú aplikáciu aj tam, kde nie je signál.",
         "Startupy, ktoré chcú nápad overiť na oboch platformách bez dvoch tímov.",
       ],
       deliverables: [
@@ -140,7 +141,7 @@ export const services: Record<Locale, Record<ServiceKey, ServiceCopy>> = {
         },
         {
           q: "Je AI na firemné dáta spoľahlivá?",
-          a: "Na niektoré úlohy áno, na iné nie. Nasadzujeme ju tam, kde sa chyba ukáže hneď, a kde ide o peniaze alebo zákazníka, posledné slovo má človek.",
+          a: "Na niektoré úlohy áno, na iné nie. Nasadzujeme ju tam, kde sa jej výstup dá ľahko skontrolovať. Kde ide o peniaze alebo zákazníka, posledné slovo má človek.",
         },
         {
           q: "Koľko stojí automatizácia?",
@@ -193,6 +194,7 @@ export const services: Record<Locale, Record<ServiceKey, ServiceCopy>> = {
         "Businesses whose old site brings nothing and they can't tell why.",
         "Shops that outgrew a template and need links to stock, CRM or ERP.",
         "Restaurants, guesthouses and services that want a multilingual site and will edit the copy themselves.",
+        "Companies that need a web application, such as ordering, bookings or a client portal.",
       ],
       deliverables: [
         "Design and build on Next.js or Astro, picked by what the site needs.",
@@ -208,7 +210,7 @@ export const services: Record<Locale, Record<ServiceKey, ServiceCopy>> = {
         },
         {
           q: "How long does it take?",
-          a: "We build in small releases. You use the first version before everything is done, and the rest arrives step by step.",
+          a: "It depends on the scope. Each option comes with a timeline as well as a price. We build in parts, so you try the first version while work is still going on.",
         },
         {
           q: "Can I edit the site myself?",
@@ -232,7 +234,7 @@ export const services: Record<Locale, Record<ServiceKey, ServiceCopy>> = {
       lead: "One app, one codebase, two stores. We build in React Native and Expo, so a new feature lands on iPhone and Android together and you don't pay for it twice.",
       forWho: [
         "Businesses whose customers come back often and a website isn't enough. Orders, bookings, loyalty.",
-        "People in the field who need the app where there's no signal.",
+        "Companies with staff in the field who need the app where there's no signal.",
         "Startups that want to test an idea on both platforms without two teams.",
       ],
       deliverables: [
@@ -289,7 +291,7 @@ export const services: Record<Locale, Record<ServiceKey, ServiceCopy>> = {
         },
         {
           q: "Is AI reliable with company data?",
-          a: "For some tasks yes, for others no. We use it where a mistake shows up right away, and where money or a customer is involved, a person has the last word.",
+          a: "For some tasks yes, for others no. We use it where its output is easy to check. Where money or a customer is involved, a person has the last word.",
         },
         {
           q: "How much does automation cost?",

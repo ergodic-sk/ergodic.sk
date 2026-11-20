@@ -43,7 +43,7 @@
     "steps": {
       "survey": {
         "title": "Survey",
-        "body": "We meet in Košice or online and find out what you do by hand today and what should change."
+        "body": "We meet in Košice or online and go through what the project should solve, who it is for and what it needs to connect to."
       },
       "variants": {
         "title": "Options",
@@ -65,8 +65,8 @@
     "items": {
       "web": {
         "tag": "Web",
-        "title": "Websites & e-shops",
-        "body": "Sites and stores that load at once on a phone. In Slovak, English or more languages.",
+        "title": "Websites & web apps",
+        "body": "Company sites, e-shops and apps that run in the browser, such as ordering or bookings. Fast on a phone and in several languages.",
         "specs": "Card payments|Several languages|Edit without a developer"
       },
       "mobile": {
@@ -78,7 +78,7 @@
       "automation": {
         "tag": "Automation",
         "title": "Automation & AI",
-        "body": "We connect your systems so nobody retypes data by hand. AI goes where a mistake shows right away.",
+        "body": "We connect your systems so nobody retypes data by hand. We use AI where it saves work and its output can be checked.",
         "specs": "APIs · Integrations|AI workflows|Internal dashboards"
       },
       "care": {
@@ -152,7 +152,7 @@
     "companyPlaceholder": "Name or company ID",
     "needs": "What do you need",
     "needOptions": {
-      "website": "Website",
+      "website": "Website or web app",
       "eshop": "E-shop",
       "mobile": "Mobile app",
       "automation": "Automation",
