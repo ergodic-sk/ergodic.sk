@@ -92,8 +92,8 @@
   },
   "Drawings": {
     "eyebrow": "List 04 · Referencie",
-    "title": "Projekty, ktoré už bežia.",
-    "lead": "Weby, ktoré sme postavili pre klientov. Kliknutím na názov ich otvoríte naživo.",
+    "title": "Projekty, na ktorých sme pracovali.",
+    "lead": "Weby pre klientov aj náš vlastný produkt. Kliknutím na názov ich otvoríte naživo.",
     "built": "Technológie",
     "outcome": "Výsledok",
     "items": {
@@ -113,7 +113,7 @@
         "kind": "Vlastný produkt · rezervácie",
         "client": "heystol",
         "stack": "Web · Stripe",
-        "result": "Hostia platia vopred, peniaze idú priamo podniku"
+        "result": "Hostia môžu platiť vopred, peniaze idú priamo podniku"
       }
     }
   },

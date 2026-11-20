@@ -1,11 +1,12 @@
 import { useTranslations } from "next-intl"
+import { site } from "@/config/site"
 import { trackAttrs } from "@/lib/analytics"
 import { withUtm } from "@/lib/utm"
 import { base, delay } from "@/lib/reveal"
 import { Container, SheetHeading } from "./sheet-heading"
 
 type Drawing = {
-  id: "kromka" | "zwicker"
+  id: "kromka" | "zwicker" | "heystol"
   code: string
   url: string
   // End y of each considered variant; the chosen one is drawn solid.
@@ -13,11 +14,12 @@ type Drawing = {
   chosen: number
 }
 
-// Client projects only; our own products live in the Products sheet.
+// Client projects plus our own heystol, labelled as our product in its kind.
 // The path study is decoration: the sketched variants are not real counts, so the card states no numbers.
 const drawings: Drawing[] = [
   { id: "kromka", code: "DWG 001", url: "https://www.pekarenkromka.sk", ends: [40, 78, 140, 170], chosen: 1 },
   { id: "zwicker", code: "DWG 002", url: "https://www.zwicker.sk", ends: [30, 70, 100, 136, 170], chosen: 3 },
+  { id: "heystol", code: "DWG 003", url: site.heystol, ends: [50, 100, 150], chosen: 1 },
 ]
 
 const path = (y: number) => `M40 100 C 150 100, 220 ${y}, 360 ${y}`
@@ -74,7 +76,7 @@ export function Drawings() {
           title={t("title")}
           aside={<p className="text-ink-soft max-w-[380px] text-[17px] leading-normal">{t("lead")}</p>}
         />
-        <ul className="grid gap-6 md:grid-cols-2">
+        <ul className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {drawings.map(({ id, code, url, ends, chosen }, i) => (
             <li
               key={id}
