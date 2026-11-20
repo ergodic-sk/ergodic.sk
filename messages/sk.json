@@ -28,8 +28,8 @@
     "scopeValue": "Web · Mobil · Automatizácia",
     "clients": "V prevádzke",
     "clientsValue": "Kromka · Zwicker · heystol · okfaktura",
-    "model": "Model",
-    "modelValue": "Stavba + mesačný paušál",
+    "model": "Spolupráca",
+    "modelValue": "Projekt alebo dlhodobo",
     "caption": "Zvažované cesty · 1 postavená",
     "drawingStart": "Štart",
     "drawingChosen": "V.04 · Vybraná",
@@ -54,8 +54,8 @@
         "body": "Vybraný variant staviame po častiach. Priebežnú verziu si pozriete na testovacej adrese a pripomienky dávate počas práce."
       },
       "maintain": {
-        "title": "Správa",
-        "body": "Po spustení sa o projekt stará ten istý človek, ktorý ho postavil. Aktualizácie, zálohy a menšie úpravy pokrýva mesačný paušál."
+        "title": "Podpora",
+        "body": "Po spustení projekt ďalej udržiavame a rozvíjame. Alebo ho prevezmete vy."
       }
     }
   },
@@ -82,10 +82,10 @@
         "specs": "API · Integrácie|AI procesy|Interné dashboardy"
       },
       "care": {
-        "tag": "Správa",
-        "title": "Správa za paušál",
-        "body": "Hosting, aktualizácie a menšie úpravy za pevnú mesačnú sumu. Píšete vždy tomu istému človekovi.",
-        "specs": "Mesačný paušál|Hosting · Monitoring|Prevezmeme aj web po inom dodávateľovi"
+        "tag": "Podpora",
+        "title": "Správa a ďalší vývoj",
+        "body": "Po spustení udržiavame web či aplikáciu v chode, opravujeme chyby a pridávame funkcie. Aj keď ich robil niekto iný.",
+        "specs": "Hosting · Monitoring|Aktualizácie · Opravy|Nové funkcie"
       }
     },
     "more": "Viac o službe"
@@ -156,7 +156,7 @@
       "eshop": "E-shop",
       "mobile": "Mobilná aplikácia",
       "automation": "Automatizácia",
-      "care": "Správa (paušál)",
+      "care": "Podpora existujúceho projektu",
       "unsure": "Ešte neviem"
     },
     "message": "Čo potrebujete vyriešiť",

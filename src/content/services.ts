@@ -71,7 +71,7 @@ export const services: Record<Locale, Record<ServiceKey, ServiceCopy>> = {
         },
         {
           q: "Čo sa s webom deje po spustení?",
-          a: "Môžete ho prevziať a spravovať sami. Alebo zostanete na mesačnom paušále a o hosting, aktualizácie a menšie úpravy sa postaráme my.",
+          a: "Môžete ho prevziať a spravovať sami. Alebo sa oň ďalej staráme my: hosting, aktualizácie, opravy aj nové funkcie.",
         },
       ],
     },
@@ -107,7 +107,7 @@ export const services: Record<Locale, Record<ServiceKey, ServiceCopy>> = {
         },
         {
           q: "Čo po spustení?",
-          a: "iOS aj Android sa každý rok menia a aplikácia s nimi musí držať krok. V mesačnom pláne ju udržiavame a pridávame menšie funkcie.",
+          a: "iOS aj Android sa každý rok menia a aplikácia s nimi musí držať krok. Po spustení ju môžeme ďalej udržiavať a pridávať funkcie.",
         },
       ],
     },
@@ -149,11 +149,11 @@ export const services: Record<Locale, Record<ServiceKey, ServiceCopy>> = {
       ],
     },
     care: {
-      metaTitle: "Správa webu a aplikácií za mesačný paušál | Ergodic",
+      metaTitle: "Správa, podpora a ďalší vývoj webu a aplikácií | Ergodic",
       metaDescription:
-        "Hosting, aktualizácie, monitoring a menšie funkcie každý mesiac za paušál. Jeden kontakt, ktorý pozná celý váš systém.",
-      h1: "Správa webu a aplikácií za mesačný paušál",
-      lead: "Web ani aplikácia nie sú hotové dňom spustenia. Za mesačný paušál ich udržíme v chode a aktuálne a pridáme menšie funkcie, keď ich budete potrebovať.",
+        "Hosting, aktualizácie, monitoring, opravy a nové funkcie po spustení. Pre weby a aplikácie, ktoré sme robili my aj iní.",
+      h1: "Správa a ďalší vývoj webu a aplikácií",
+      lead: "Web ani aplikácia nie sú hotové dňom spustenia. Udržíme ich v chode a aktuálne a pridáme funkcie, keď ich budete potrebovať.",
       forWho: [
         "Firmy bez vlastného programátora, ktoré ho nechcú hľadať pri každej zmene.",
         "Majitelia webov a aplikácií, ktorým pôvodný dodávateľ prestal odpovedať.",
@@ -163,7 +163,7 @@ export const services: Record<Locale, Record<ServiceKey, ServiceCopy>> = {
         "Hosting a SSL certifikáty.",
         "Bezpečnostné a systémové aktualizácie.",
         "Monitoring dostupnosti a chýb.",
-        "Menšie úpravy a nové funkcie každý mesiac.",
+        "Úpravy a nové funkcie podľa toho, čo práve potrebujete.",
         "Jeden kontakt, ktorý pozná celý systém.",
       ],
       faq: [
@@ -173,11 +173,11 @@ export const services: Record<Locale, Record<ServiceKey, ServiceCopy>> = {
         },
         {
           q: "Čo ak potrebujem väčšiu zmenu?",
-          a: "Menšie úpravy sú v paušále. Väčšiu zmenu nakreslíme ako samostatné varianty s cenou a rozhodnete sa vy.",
+          a: "Väčšiu zmenu nakreslíme ako samostatné varianty s cenou a rozhodnete sa vy.",
         },
         {
-          q: "Koľko stojí paušál?",
-          a: "Záleží na tom, koľko systémov spravujeme a koľko práce mesačne čakáte. Cenu poznáte vopred.",
+          q: "Ako sa platí za podporu?",
+          a: "Platiť môžete za odvedenú prácu alebo pevnou mesačnou sumou, ak čakáte prácu pravidelne. Cenu poznáte vopred.",
         },
       ],
     },
@@ -220,7 +220,7 @@ export const services: Record<Locale, Record<ServiceKey, ServiceCopy>> = {
         },
         {
           q: "What happens after launch?",
-          a: "You can take it over and run it yourself. Or stay on a monthly retainer and we handle hosting, updates and small changes.",
+          a: "You can take it over and run it yourself. Or we keep looking after it: hosting, updates, fixes and new features.",
         },
       ],
     },
@@ -256,7 +256,7 @@ export const services: Record<Locale, Record<ServiceKey, ServiceCopy>> = {
         },
         {
           q: "What happens after launch?",
-          a: "iOS and Android change every year and the app has to keep up. On a monthly plan we maintain it and add small features.",
+          a: "iOS and Android change every year and the app has to keep up. After launch we can keep maintaining it and adding features.",
         },
       ],
     },
@@ -298,11 +298,11 @@ export const services: Record<Locale, Record<ServiceKey, ServiceCopy>> = {
       ],
     },
     care: {
-      metaTitle: "Website and app maintenance retainer | Ergodic",
+      metaTitle: "Website and app maintenance, support and development | Ergodic",
       metaDescription:
-        "Hosting, updates, monitoring and small features every month for a flat fee. One contact who knows your whole system.",
-      h1: "Website and app maintenance on a monthly retainer",
-      lead: "A site or app isn't finished on launch day. On a monthly retainer we keep it running and up to date, and add small features when you need them.",
+        "Hosting, updates, monitoring, fixes and new features after launch. For sites and apps we built and ones we did not.",
+      h1: "Website and app maintenance and ongoing development",
+      lead: "A site or app isn't finished on launch day. We keep it running and up to date, and add features when you need them.",
       forWho: [
         "Companies without an in-house developer who don't want to hunt for one at every change.",
         "Owners of sites and apps whose original vendor stopped answering.",
@@ -312,7 +312,7 @@ export const services: Record<Locale, Record<ServiceKey, ServiceCopy>> = {
         "Hosting and SSL certificates.",
         "Security and platform updates.",
         "Uptime and error monitoring.",
-        "Small changes and new features every month.",
+        "Changes and new features when you need them.",
         "One contact who knows the whole system.",
       ],
       faq: [
@@ -322,11 +322,11 @@ export const services: Record<Locale, Record<ServiceKey, ServiceCopy>> = {
         },
         {
           q: "What if I need a bigger change?",
-          a: "Small changes are in the retainer. A bigger one we draw up as separate options with prices, and you decide.",
+          a: "We draw up a bigger change as separate options with prices, and you decide.",
         },
         {
-          q: "How much is the retainer?",
-          a: "It depends on how many systems we look after and how much work you expect each month. You know the price up front.",
+          q: "How do I pay for support?",
+          a: "You can pay for the work done, or a fixed monthly amount if you expect regular work. You know the price up front.",
         },
       ],
     },

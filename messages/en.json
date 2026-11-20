@@ -28,8 +28,8 @@
     "scopeValue": "Web · Mobile · Automation",
     "clients": "Live now",
     "clientsValue": "Kromka · Zwicker · heystol · okfaktura",
-    "model": "Model",
-    "modelValue": "Build + monthly plan",
+    "model": "Engagement",
+    "modelValue": "Project or ongoing",
     "caption": "Paths considered · 1 built",
     "drawingStart": "Start",
     "drawingChosen": "V.04 · Chosen",
@@ -54,8 +54,8 @@
         "body": "We build the chosen option in parts. You can check the work in progress on a test link and comment as it grows."
       },
       "maintain": {
-        "title": "Maintain",
-        "body": "After launch, the person who built it looks after it. Updates, backups and small changes are covered by a monthly plan."
+        "title": "Support",
+        "body": "After launch we keep maintaining and developing it. Or you take it over."
       }
     }
   },
@@ -82,10 +82,10 @@
         "specs": "APIs · Integrations|AI workflows|Internal dashboards"
       },
       "care": {
-        "tag": "Maintenance",
-        "title": "Maintenance plans",
-        "body": "Hosting, updates and small changes for a fixed monthly fee. You always write to the same person.",
-        "specs": "Monthly plan|Hosting · Monitoring|We take over sites from other developers"
+        "tag": "Support",
+        "title": "Maintenance & development",
+        "body": "After launch we keep the site or app running, fix bugs and add features. Even if someone else built it.",
+        "specs": "Hosting · Monitoring|Updates · Fixes|New features"
       }
     },
     "more": "More about this service"
@@ -156,7 +156,7 @@
       "eshop": "E-shop",
       "mobile": "Mobile app",
       "automation": "Automation",
-      "care": "Maintenance",
+      "care": "Support for an existing project",
       "unsure": "Not sure yet"
     },
     "message": "What do you need",
