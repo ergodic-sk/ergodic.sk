@@ -4,8 +4,8 @@
     "description": "Websites, e-shops, mobile apps and automation for businesses in Slovakia and the EU. Out of every possible option, we build the right one."
   },
   "Nav": {
-    "label": "Sheets",
-    "open": "Open sheet index",
+    "label": "Menu",
+    "open": "Open menu",
     "method": "Method",
     "services": "Services",
     "drawings": "Work",
@@ -26,11 +26,11 @@
     "secondary": "See our work",
     "scope": "Scope",
     "scopeValue": "Web · Mobile · Automation",
-    "clients": "Clients",
-    "clientsValue": "Slovakia · EU",
+    "clients": "Live now",
+    "clientsValue": "Kromka · Zwicker · heystol · okfaktura",
     "model": "Model",
-    "modelValue": "Monthly retainers",
-    "caption": "7 paths considered · 1 chosen",
+    "modelValue": "Build + monthly plan",
+    "caption": "Paths considered · 1 built",
     "drawingStart": "Start",
     "drawingChosen": "V.04 · Chosen",
     "drawingBuilt": "Built",
@@ -38,42 +38,42 @@
   },
   "Method": {
     "eyebrow": "Sheet 02 · Method",
-    "title": "From survey to a system that keeps working.",
+    "title": "You see the options and prices first. Then we build.",
     "scale": "Scale · 1 project : 1 path",
     "steps": {
       "survey": {
         "title": "Survey",
-        "body": "We learn how your business actually runs: people, tools and where the money flows."
+        "body": "We meet in Košice or online and find out what you do by hand today and what should change."
       },
       "variants": {
-        "title": "Variants",
-        "body": "We draw the options side by side, from off-the-shelf to custom, with what each one costs."
+        "title": "Options",
+        "body": "We lay the options side by side, each with a price. If an off-the-shelf service will do, we tell you straight away."
       },
       "build": {
         "title": "Build",
-        "body": "We build the chosen one in small releases, so you use it long before it is finished."
+        "body": "We build the chosen option in parts. You can check the work in progress on a test link, so your feedback comes along the way, not at the end."
       },
       "maintain": {
         "title": "Maintain",
-        "body": "A monthly retainer keeps it running and growing, with one person who knows the whole system."
+        "body": "After launch, the person who built it looks after it. Updates, backups and small changes are covered by a monthly plan."
       }
     }
   },
   "Services": {
     "eyebrow": "Sheet 03 · Services",
-    "title": "What we draw and build.",
+    "title": "What we build for you.",
     "items": {
       "web": {
         "tag": "Web",
-        "title": "Web & e-shops",
+        "title": "Websites & e-shops",
         "body": "Sites and stores that load at once on a phone. In Slovak, English or more languages.",
-        "specs": "Next.js · Astro|Stripe payments|SK / EN"
+        "specs": "Card payments|Several languages|Edit without a developer"
       },
       "mobile": {
         "tag": "Mobile",
         "title": "Mobile apps",
         "body": "One codebase for iOS and Android, published in both stores.",
-        "specs": "React Native · Expo|App Store · Google Play|Push · Offline"
+        "specs": "iPhone and Android|App Store · Google Play|Notifications · Offline mode"
       },
       "automation": {
         "tag": "Automation",
@@ -82,37 +82,35 @@
         "specs": "APIs · Integrations|AI workflows|Internal dashboards"
       },
       "care": {
-        "tag": "Care",
-        "title": "Care & retainers",
-        "body": "Hosting, updates and small features every month. One person handles all of it.",
-        "specs": "Monthly plan|Hosting · Monitoring|One contact"
+        "tag": "Maintenance",
+        "title": "Maintenance plans",
+        "body": "Hosting, updates and small changes for a fixed monthly fee. You always write to the same person.",
+        "specs": "Monthly plan|Hosting · Monitoring|We take over sites from other developers"
       }
     },
     "more": "More about this service"
   },
   "Drawings": {
     "eyebrow": "Sheet 04 · Work",
-    "title": "Every project is a path study.",
-    "lead": "What we considered, what we built, and why.",
-    "considered": "Considered",
-    "built": "Built",
+    "title": "Projects already live.",
+    "lead": "Sites we built for clients. Click a name to open it live.",
+    "built": "Built with",
     "outcome": "Outcome",
-    "variants": "{count, plural, one {# variant} other {# variants}}",
     "items": {
       "kromka": {
-        "kind": "E-shop",
+        "kind": "Bakery e-shop",
         "client": "Pekáreň Kromka",
         "stack": "Next.js · PostgreSQL",
-        "result": "Custom CRM and ERP integration"
+        "result": "Shop connected to their CRM and ERP"
       },
       "zwicker": {
         "kind": "Restaurant & guesthouse",
         "client": "Zwicker",
         "stack": "Next.js · Payload CMS",
-        "result": "Multilingual site with its own CMS"
+        "result": "Multilingual site with a Payload CMS admin"
       },
       "heystol": {
-        "kind": "Restaurant bookings",
+        "kind": "Our product · bookings",
         "client": "heystol",
         "stack": "Web · Stripe",
         "result": "Guests prepay, money goes straight to the venue"
@@ -124,12 +122,12 @@
     "title": "Products we build and run ourselves.",
     "items": {
       "heystol": {
-        "tag": "P-01 · Restaurants",
-        "body": "Reservations and prepaid ticketed events for restaurants. Guests pay when they book, and the money goes straight to the restaurant’s own account."
+        "tag": "P-01 · Cafés & restaurants",
+        "body": "Table bookings and seats for events such as tastings or workshops, all on one link. Guests can pay when they book, and the money goes straight to the venue's account, not through us."
       },
       "okfaktura": {
-        "tag": "P-02 · Agencies & suppliers",
-        "body": "Monthly invoicing between agencies and their suppliers. Suppliers confirm a prefilled draft, IBAN and VAT details are checked before issue, and accounting gets one ZIP a month with PDF, XML and CSV."
+        "tag": "P-02 · Teams with contractors",
+        "body": "For companies that settle invoices with several contractors every month. The system drafts each contractor's invoice, the contractor confirms it, and the IBAN and VAT details are checked before it goes out. Your accountant gets the whole month's documents at once."
       }
     }
   },
@@ -144,45 +142,46 @@
   },
   "Contact": {
     "eyebrow": "Sheet {n} · Contact",
-    "title": "Tell us where you want to get to.",
-    "lead": "We reply within one working day with questions, then send the first drawing of your options."
+    "title": "Tell us what you want to build or fix.",
+    "lead": "We reply within one working day with a few questions. Then we send you options, each with a price."
   },
   "Brief": {
     "name": "Name",
     "namePlaceholder": "Your name",
-    "company": "Company",
-    "companyPlaceholder": "Company, IČO optional",
+    "company": "Company (optional)",
+    "companyPlaceholder": "Name or company ID",
     "needs": "What do you need",
     "needOptions": {
       "website": "Website",
       "eshop": "E-shop",
       "mobile": "Mobile app",
       "automation": "Automation",
+      "care": "Maintenance",
       "unsure": "Not sure yet"
     },
-    "message": "Where do you want to get to",
-    "messagePlaceholder": "A few sentences about the business and the goal.",
+    "message": "What do you need",
+    "messagePlaceholder": "E.g. We run a bakery and want to sell online with pickup in store. Right now we take orders by phone.",
     "email": "Email",
-    "emailPlaceholder": "you@company.sk",
-    "submit": "Send brief",
+    "emailPlaceholder": "you@company.com",
+    "submit": "Continue in email",
     "consent": "We use these details only to reply to you. <link>Privacy</link>",
     "success": "Your mail app should open with the brief filled in. Just press send.",
     "successHint": "Nothing opened? Write to <mail>office@ergodic.sk</mail>.",
     "errors": {
       "name": "Please tell us your name.",
       "email": "Please enter a valid email.",
-      "message": "Please write a few words about the goal."
+      "message": "Please write a few words about what you need."
     }
   },
   "Footer": {
-    "privacy": "Ochrana osobných údajov",
+    "privacy": "Privacy policy",
     "linkedin": "LinkedIn",
     "heystol": "heystol",
     "okfaktura": "okfaktura"
   },
   "Privacy": {
-    "eyebrow": "Ochrana osobných údajov",
-    "title": "Privacy",
+    "eyebrow": "Privacy policy",
+    "title": "Privacy policy",
     "back": "Back to the site"
   },
   "ServicePage": {

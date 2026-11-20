@@ -4,8 +4,8 @@
     "description": "Weby, e-shopy, mobilné aplikácie a automatizácia na mieru pre firmy na Slovensku a v EÚ. Zo všetkých možných variantov postavíme ten správny."
   },
   "Nav": {
-    "label": "Listy",
-    "open": "Otvoriť zoznam listov",
+    "label": "Menu",
+    "open": "Otvoriť menu",
     "method": "Metóda",
     "services": "Služby",
     "drawings": "Referencie",
@@ -26,11 +26,11 @@
     "secondary": "Pozrieť referencie",
     "scope": "Rozsah",
     "scopeValue": "Web · Mobil · Automatizácia",
-    "clients": "Klienti",
-    "clientsValue": "Slovensko · EÚ",
+    "clients": "V prevádzke",
+    "clientsValue": "Kromka · Zwicker · heystol · okfaktura",
     "model": "Model",
-    "modelValue": "Mesačný paušál",
-    "caption": "7 zvážených ciest · 1 vybraná",
+    "modelValue": "Stavba + mesačný paušál",
+    "caption": "Zvažované cesty · 1 postavená",
     "drawingStart": "Štart",
     "drawingChosen": "V.04 · Vybraná",
     "drawingBuilt": "Postavená",
@@ -38,42 +38,42 @@
   },
   "Method": {
     "eyebrow": "List 02 · Metóda",
-    "title": "Od prieskumu po systém, ktorý funguje ďalej.",
+    "title": "Najprv uvidíte varianty s cenou. Až potom staviame.",
     "scale": "Mierka · 1 projekt : 1 cesta",
     "steps": {
       "survey": {
         "title": "Prieskum",
-        "body": "Zistíme, ako vaša firma naozaj funguje: ľudia, nástroje a kadiaľ tečú peniaze."
+        "body": "Stretneme sa v Košiciach alebo online. Zistíme, čo dnes robíte ručne a čo sa má zmeniť."
       },
       "variants": {
         "title": "Varianty",
-        "body": "Nakreslíme možnosti vedľa seba, od hotových riešení po vývoj na mieru, aj s cenou každej."
+        "body": "Nakreslíme možnosti vedľa seba, každú s cenou. Ak vám stačí hotová služba, povieme vám to rovno."
       },
       "build": {
         "title": "Stavba",
-        "body": "Vybraný variant staviame v malých vydaniach, takže ho používate dávno pred dokončením."
+        "body": "Vybraný variant staviame po častiach. Priebežnú verziu si pozriete na testovacej adrese, takže pripomienky dávate počas práce, nie až na konci."
       },
       "maintain": {
-        "title": "Údržba",
-        "body": "Mesačný paušál ho udrží v chode a nechá rásť, s jedným človekom, ktorý pozná celý systém."
+        "title": "Správa",
+        "body": "Po spustení sa o projekt stará ten istý človek, ktorý ho postavil. Aktualizácie, zálohy a menšie úpravy pokrýva mesačný paušál."
       }
     }
   },
   "Services": {
     "eyebrow": "List 03 · Služby",
-    "title": "Čo kreslíme a staviame.",
+    "title": "Čo pre vás postavíme.",
     "items": {
       "web": {
         "tag": "Web",
         "title": "Weby a e-shopy",
         "body": "Weby a e-shopy, ktoré sa na telefóne načítajú hneď. Po slovensky, po anglicky alebo v ďalších jazykoch.",
-        "specs": "Next.js · Astro|Platby cez Stripe|SK / EN"
+        "specs": "Platby kartou|Viac jazykov|Úpravy bez programátora"
       },
       "mobile": {
         "tag": "Mobil",
         "title": "Mobilné aplikácie",
         "body": "Jeden kód pre iOS aj Android, zverejnený v oboch obchodoch.",
-        "specs": "React Native · Expo|App Store · Google Play|Push · Offline"
+        "specs": "iPhone aj Android|App Store · Google Play|Notifikácie · Offline režim"
       },
       "automation": {
         "tag": "Automatizácia",
@@ -82,37 +82,35 @@
         "specs": "API · Integrácie|AI procesy|Interné dashboardy"
       },
       "care": {
-        "tag": "Starostlivosť",
-        "title": "Starostlivosť a paušály",
-        "body": "Hosting, aktualizácie a menšie funkcie každý mesiac. Všetko rieši jeden človek.",
-        "specs": "Mesačný plán|Hosting · Monitoring|Jeden kontakt"
+        "tag": "Správa",
+        "title": "Správa za paušál",
+        "body": "Hosting, aktualizácie a menšie úpravy za pevnú mesačnú sumu. Píšete vždy tomu istému človekovi.",
+        "specs": "Mesačný paušál|Hosting · Monitoring|Prevezmeme aj web po inom dodávateľovi"
       }
     },
     "more": "Viac o službe"
   },
   "Drawings": {
     "eyebrow": "List 04 · Referencie",
-    "title": "Každý projekt je štúdia ciest.",
-    "lead": "Čo sme zvážili, čo sme postavili a prečo.",
-    "considered": "Zvážené",
-    "built": "Postavené",
+    "title": "Projekty, ktoré už bežia.",
+    "lead": "Weby, ktoré sme postavili pre klientov. Kliknutím na názov ich otvoríte naživo.",
+    "built": "Technológie",
     "outcome": "Výsledok",
-    "variants": "{count, plural, one {# variant} few {# varianty} other {# variantov}}",
     "items": {
       "kromka": {
-        "kind": "E-shop",
+        "kind": "E-shop pekárne",
         "client": "Pekáreň Kromka",
         "stack": "Next.js · PostgreSQL",
-        "result": "Vlastné prepojenie na CRM a ERP"
+        "result": "E-shop prepojený s ich CRM a ERP"
       },
       "zwicker": {
         "kind": "Reštaurácia a penzión",
         "client": "Zwicker",
         "stack": "Next.js · Payload CMS",
-        "result": "Viacjazyčný web s vlastným CMS"
+        "result": "Web vo viacerých jazykoch s administráciou v Payload CMS"
       },
       "heystol": {
-        "kind": "Rezervácie pre podniky",
+        "kind": "Vlastný produkt · rezervácie",
         "client": "heystol",
         "stack": "Web · Stripe",
         "result": "Hostia platia vopred, peniaze idú priamo podniku"
@@ -124,12 +122,12 @@
     "title": "Produkty, ktoré sami vyvíjame a prevádzkujeme.",
     "items": {
       "heystol": {
-        "tag": "P-01 · Reštaurácie",
-        "body": "Rezervácie a predplatené podujatia so vstupenkami pre reštaurácie. Hostia platia pri rezervácii a peniaze idú priamo na účet reštaurácie."
+        "tag": "P-01 · Kaviarne a reštaurácie",
+        "body": "Rezervácie stolov a miest na podujatia, napríklad degustácie či workshopy, cez jeden odkaz. Hostia môžu zaplatiť už pri rezervácii a peniaze idú rovno na účet podniku, nie cez nás."
       },
       "okfaktura": {
-        "tag": "P-02 · Agentúry a dodávatelia",
-        "body": "Mesačná fakturácia medzi agentúrami a ich dodávateľmi. Dodávateľ potvrdí predvyplnený návrh, IBAN a DPH údaje sa skontrolujú pred vystavením a účtovníctvo dostane raz mesačne jeden ZIP s PDF, XML a CSV."
+        "tag": "P-02 · Firmy s externistami",
+        "body": "Pre firmy, ktoré každý mesiac fakturujú s viacerými externistami. Systém pripraví faktúru za externistu, ten ju potvrdí a pred vystavením sa skontroluje IBAN aj údaje o DPH. Účtovník dostane doklady za celý mesiac naraz."
       }
     }
   },
@@ -145,33 +143,34 @@
   "Contact": {
     "eyebrow": "List {n} · Kontakt",
     "title": "Povedzte nám, kam sa chcete dostať.",
-    "lead": "Do jedného pracovného dňa sa ozveme s otázkami a potom pošleme prvý výkres vašich možností."
+    "lead": "Do jedného pracovného dňa sa ozveme s otázkami. Potom vám pošleme varianty riešenia, každý s cenou."
   },
   "Brief": {
     "name": "Meno",
     "namePlaceholder": "Vaše meno",
-    "company": "Firma",
-    "companyPlaceholder": "Firma, IČO nepovinné",
+    "company": "Firma (nepovinné)",
+    "companyPlaceholder": "Názov alebo IČO",
     "needs": "Čo potrebujete",
     "needOptions": {
       "website": "Web",
       "eshop": "E-shop",
       "mobile": "Mobilná aplikácia",
       "automation": "Automatizácia",
+      "care": "Správa (paušál)",
       "unsure": "Ešte neviem"
     },
-    "message": "Kam sa chcete dostať",
-    "messagePlaceholder": "Pár viet o firme a o cieli.",
+    "message": "Čo potrebujete vyriešiť",
+    "messagePlaceholder": "Napr.: Máme pekáreň a chceme predávať online s vyzdvihnutím na predajni. Teraz berieme objednávky po telefóne.",
     "email": "E-mail",
     "emailPlaceholder": "vy@firma.sk",
-    "submit": "Odoslať zadanie",
+    "submit": "Pokračovať v e-maile",
     "consent": "Údaje použijeme len na odpoveď. <link>Ochrana osobných údajov</link>",
     "success": "Otvorí sa vám e-mailový program s vyplneným zadaním. Stačí ho odoslať.",
     "successHint": "Nič sa neotvorilo? Napíšte nám na <mail>office@ergodic.sk</mail>.",
     "errors": {
       "name": "Napíšte nám, prosím, svoje meno.",
       "email": "Zadajte, prosím, platný e-mail.",
-      "message": "Napíšte, prosím, pár slov o cieli."
+      "message": "Napíšte, prosím, pár slov o tom, čo potrebujete."
     }
   },
   "Footer": {
