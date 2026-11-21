@@ -1,14 +1,14 @@
 {
   "Metadata": {
     "title": "Web and mobile app development in Slovakia | Ergodic",
-    "description": "Websites, e-shops, mobile apps and automation for businesses in Slovakia and the EU. We draw the options with prices first, then build the one that fits you."
+    "description": "Websites, e-shops, mobile apps and automation for businesses in Slovakia and the EU. Out of every possible option, we build the right one."
   },
   "Nav": {
     "label": "Sheets",
     "open": "Open sheet index",
     "method": "Method",
     "services": "Services",
-    "drawings": "Drawings",
+    "drawings": "Work",
     "products": "Products",
     "studio": "Studio",
     "contact": "Contact",
@@ -20,10 +20,10 @@
     "sheet": "Sheet 01",
     "titleA": "Many paths.",
     "titleB": "We build the one that’s yours.",
-    "lead": "Web, mobile and automation for businesses in Slovakia and beyond. We draw the options first, then build the one that fits you, not the average.",
-    "leadShort": "Web, mobile and automation. We draw the options first, then build the one that fits you.",
+    "lead": "Custom websites, e-shops, mobile apps and automation for companies across Slovakia and abroad. Out of every possible option, we build the right one.",
+    "leadShort": "Websites, apps and automation, built to fit. Out of every possible option, we build the right one.",
     "primary": "Start a project",
-    "secondary": "See the drawings",
+    "secondary": "See our work",
     "scope": "Scope",
     "scopeValue": "Web · Mobile · Automation",
     "clients": "Clients",
@@ -34,7 +34,7 @@
     "drawingStart": "Start",
     "drawingChosen": "V.04 · Chosen",
     "drawingBuilt": "Built",
-    "h1Keyword": "Web and app development · Košice"
+    "h1Keyword": "Web and app development · Slovakia"
   },
   "Method": {
     "eyebrow": "Sheet 02 · Method",
@@ -66,7 +66,7 @@
       "web": {
         "tag": "Web",
         "title": "Web & e-shops",
-        "body": "Sites and stores that sell, in Slovak and English, fast on every phone.",
+        "body": "Sites and stores that load at once on a phone. In Slovak, English or more languages.",
         "specs": "Next.js · Astro|Stripe payments|SK / EN"
       },
       "mobile": {
@@ -78,20 +78,20 @@
       "automation": {
         "tag": "Automation",
         "title": "Automation & AI",
-        "body": "Workflows that run themselves, with a person where it matters.",
+        "body": "We connect your systems so nobody retypes data by hand. AI goes where a mistake shows right away.",
         "specs": "APIs · Integrations|AI workflows|Internal dashboards"
       },
       "care": {
         "tag": "Care",
         "title": "Care & retainers",
-        "body": "Hosting, updates and small features every month, from one contact.",
+        "body": "Hosting, updates and small features every month. One person handles all of it.",
         "specs": "Monthly plan|Hosting · Monitoring|One contact"
       }
     },
     "more": "More about this service"
   },
   "Drawings": {
-    "eyebrow": "Sheet 04 · Drawings",
+    "eyebrow": "Sheet 04 · Work",
     "title": "Every project is a path study.",
     "lead": "What we considered, what we built, and why.",
     "considered": "Considered",
@@ -121,7 +121,7 @@
   },
   "Products": {
     "eyebrow": "Sheet 05 · Products",
-    "title": "Our own drawings.",
+    "title": "Products we build and run ourselves.",
     "items": {
       "heystol": {
         "tag": "P-01 · Restaurants",
@@ -191,7 +191,7 @@
     "forWho": "Who it's for",
     "deliverables": "What you get",
     "process": "How we work",
-    "cases": "From our drawings",
+    "cases": "Our work",
     "faq": "Questions",
     "other": "Other services",
     "cta": "Start a project",

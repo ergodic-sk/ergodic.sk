@@ -1,14 +1,14 @@
 {
   "Metadata": {
-    "title": "Tvorba webov a mobilných aplikácií na mieru · Košice | Ergodic",
-    "description": "Weby, e-shopy, mobilné aplikácie a automatizácia na mieru pre firmy na Slovensku a v EÚ. Najprv varianty s cenou, potom postavíme ten, ktorý sedí vám."
+    "title": "Tvorba webov a mobilných aplikácií na mieru · Slovensko | Ergodic",
+    "description": "Weby, e-shopy, mobilné aplikácie a automatizácia na mieru pre firmy na Slovensku a v EÚ. Zo všetkých možných variantov postavíme ten správny."
   },
   "Nav": {
     "label": "Listy",
     "open": "Otvoriť zoznam listov",
     "method": "Metóda",
     "services": "Služby",
-    "drawings": "Výkresy",
+    "drawings": "Referencie",
     "products": "Produkty",
     "studio": "Štúdio",
     "contact": "Kontakt",
@@ -20,10 +20,10 @@
     "sheet": "List 01",
     "titleA": "Veľa ciest.",
     "titleB": "Postavíme tú vašu.",
-    "lead": "Web, mobilné aplikácie a automatizácia pre firmy na Slovensku aj za hranicami. Najprv nakreslíme možnosti, potom postavíme tú, ktorá sedí vám, nie priemeru.",
-    "leadShort": "Web, mobil a automatizácia. Najprv nakreslíme možnosti, potom postavíme tú, ktorá sedí vám.",
+    "lead": "Weby, e-shopy, mobilné aplikácie a automatizácia na mieru pre firmy z celého Slovenska aj zo zahraničia. Zo všetkých možných variantov postavíme ten správny.",
+    "leadShort": "Weby, aplikácie a automatizácia na mieru. Zo všetkých možných variantov postavíme ten správny.",
     "primary": "Začať projekt",
-    "secondary": "Pozrieť výkresy",
+    "secondary": "Pozrieť referencie",
     "scope": "Rozsah",
     "scopeValue": "Web · Mobil · Automatizácia",
     "clients": "Klienti",
@@ -34,7 +34,7 @@
     "drawingStart": "Štart",
     "drawingChosen": "V.04 · Vybraná",
     "drawingBuilt": "Postavená",
-    "h1Keyword": "Tvorba webov a aplikácií · Košice"
+    "h1Keyword": "Tvorba webov a aplikácií · Slovensko"
   },
   "Method": {
     "eyebrow": "List 02 · Metóda",
@@ -66,7 +66,7 @@
       "web": {
         "tag": "Web",
         "title": "Weby a e-shopy",
-        "body": "Weby a obchody, ktoré predávajú, po slovensky aj po anglicky, rýchle na každom telefóne.",
+        "body": "Weby a e-shopy, ktoré sa na telefóne načítajú hneď. Po slovensky, po anglicky alebo v ďalších jazykoch.",
         "specs": "Next.js · Astro|Platby cez Stripe|SK / EN"
       },
       "mobile": {
@@ -78,20 +78,20 @@
       "automation": {
         "tag": "Automatizácia",
         "title": "Automatizácia a AI",
-        "body": "Procesy, ktoré bežia samy, s človekom tam, kde na tom záleží.",
+        "body": "Prepojíme vaše systémy, aby nikto neprepisoval údaje ručne. AI nasadíme tam, kde chybu hneď vidno.",
         "specs": "API · Integrácie|AI procesy|Interné dashboardy"
       },
       "care": {
         "tag": "Starostlivosť",
         "title": "Starostlivosť a paušály",
-        "body": "Hosting, aktualizácie a menšie funkcie každý mesiac, od jedného kontaktu.",
+        "body": "Hosting, aktualizácie a menšie funkcie každý mesiac. Všetko rieši jeden človek.",
         "specs": "Mesačný plán|Hosting · Monitoring|Jeden kontakt"
       }
     },
     "more": "Viac o službe"
   },
   "Drawings": {
-    "eyebrow": "List 04 · Výkresy",
+    "eyebrow": "List 04 · Referencie",
     "title": "Každý projekt je štúdia ciest.",
     "lead": "Čo sme zvážili, čo sme postavili a prečo.",
     "considered": "Zvážené",
@@ -121,7 +121,7 @@
   },
   "Products": {
     "eyebrow": "List 05 · Produkty",
-    "title": "Naše vlastné výkresy.",
+    "title": "Produkty, ktoré sami vyvíjame a prevádzkujeme.",
     "items": {
       "heystol": {
         "tag": "P-01 · Reštaurácie",
@@ -191,7 +191,7 @@
     "forWho": "Pre koho",
     "deliverables": "Čo dostanete",
     "process": "Ako postupujeme",
-    "cases": "Z našich výkresov",
+    "cases": "Referencie",
     "faq": "Časté otázky",
     "other": "Ďalšie služby",
     "cta": "Začať projekt",
