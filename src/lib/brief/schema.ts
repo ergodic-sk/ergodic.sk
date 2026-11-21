@@ -1,4 +1,4 @@
-export const needs = ["website", "eshop", "mobile", "automation", "unsure"] as const
+export const needs = ["website", "eshop", "mobile", "automation", "care", "unsure"] as const
 
 export type Need = (typeof needs)[number]
 export type BriefField = "name" | "email" | "message"

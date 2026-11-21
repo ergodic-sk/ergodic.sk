@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { getLocale, getTranslations } from "next-intl/server"
 import { buttonVariants } from "@/components/ui/button"
 import { site } from "@/config/site"
+import type { Need } from "@/lib/brief/schema"
 import { serviceCases, serviceKeys, servicePath, services, type ServiceKey } from "@/content/services"
 import { getPathname, Link } from "@/i18n/navigation"
 import { routing, type Locale } from "@/i18n/routing"
@@ -39,6 +40,11 @@ export async function serviceMetadata(service: ServiceKey): Promise<Metadata> {
     twitter: { title: copy.metaTitle, description: copy.metaDescription },
   }
 }
+
+const briefNeed = { web: "website", mobile: "mobile", automation: "automation", care: "care" } as const satisfies Record<
+  ServiceKey,
+  Need
+>
 
 export async function ServicePage({ service }: { service: ServiceKey }) {
   const locale = (await getLocale()) as Locale
@@ -268,7 +274,7 @@ export async function ServicePage({ service }: { service: ServiceKey }) {
           </Container>
         </section>
 
-        <Contact />
+        <Contact need={briefNeed[service]} />
       </main>
       <SiteFooter />
     </>

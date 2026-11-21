@@ -44,6 +44,7 @@ export const services: Record<Locale, Record<ServiceKey, ServiceCopy>> = {
         "Firmy, ktorým starý web nič neprináša a nevedia prečo.",
         "Obchody, ktoré prerástli šablónu a potrebujú prepojenie na sklad, CRM alebo ERP.",
         "Reštaurácie, penzióny a služby, ktoré chcú viacjazyčný web a texty si budú meniť samy.",
+        "Firmy, ktoré potrebujú webovú aplikáciu, napríklad objednávky, rezervácie alebo klientsku zónu.",
       ],
       deliverables: [
         "Návrh a vývoj na Next.js alebo Astro. Vyberieme podľa toho, čo web potrebuje.",
@@ -59,7 +60,7 @@ export const services: Record<Locale, Record<ServiceKey, ServiceCopy>> = {
         },
         {
           q: "Ako dlho to trvá?",
-          a: "Staviame v malých vydaniach. Prvú verziu používate skôr, než je hotové všetko, a ďalšie časti pribúdajú postupne.",
+          a: "Záleží na rozsahu. Termín uvidíte pri každom variante spolu s cenou. Staviame po častiach, takže prvú verziu skúšate už počas práce.",
         },
         {
           q: "Budem si môcť web upravovať sám?",
@@ -71,7 +72,7 @@ export const services: Record<Locale, Record<ServiceKey, ServiceCopy>> = {
         },
         {
           q: "Čo sa s webom deje po spustení?",
-          a: "Môžete ho prevziať a spravovať sami. Alebo zostanete na mesačnom paušále a o hosting, aktualizácie a menšie úpravy sa postaráme my.",
+          a: "Môžete ho prevziať a spravovať sami. Alebo sa oň ďalej staráme my: hosting, aktualizácie, opravy aj nové funkcie.",
         },
       ],
     },
@@ -83,7 +84,7 @@ export const services: Record<Locale, Record<ServiceKey, ServiceCopy>> = {
       lead: "Jedna aplikácia, jeden kód, dva obchody. Píšeme v React Native a Expo, takže nová funkcia príde na iPhone aj Android naraz a vývoj neplatíte dvakrát.",
       forWho: [
         "Firmy, ku ktorým sa zákazníci vracajú pravidelne a web im nestačí. Objednávky, rezervácie, vernostné programy.",
-        "Ľudia v teréne, ktorí potrebujú aplikáciu aj tam, kde nie je signál.",
+        "Firmy s ľuďmi v teréne, ktorí potrebujú aplikáciu aj tam, kde nie je signál.",
         "Startupy, ktoré chcú nápad overiť na oboch platformách bez dvoch tímov.",
       ],
       deliverables: [
@@ -107,7 +108,7 @@ export const services: Record<Locale, Record<ServiceKey, ServiceCopy>> = {
         },
         {
           q: "Čo po spustení?",
-          a: "iOS aj Android sa každý rok menia a aplikácia s nimi musí držať krok. V mesačnom pláne ju udržiavame a pridávame menšie funkcie.",
+          a: "iOS aj Android sa každý rok menia a aplikácia s nimi musí držať krok. Po spustení ju môžeme ďalej udržiavať a pridávať funkcie.",
         },
       ],
     },
@@ -140,7 +141,7 @@ export const services: Record<Locale, Record<ServiceKey, ServiceCopy>> = {
         },
         {
           q: "Je AI na firemné dáta spoľahlivá?",
-          a: "Na niektoré úlohy áno, na iné nie. Nasadzujeme ju tam, kde sa chyba ukáže hneď, a kde ide o peniaze alebo zákazníka, posledné slovo má človek.",
+          a: "Na niektoré úlohy áno, na iné nie. Nasadzujeme ju tam, kde sa jej výstup dá ľahko skontrolovať. Kde ide o peniaze alebo zákazníka, posledné slovo má človek.",
         },
         {
           q: "Koľko stojí automatizácia?",
@@ -149,11 +150,11 @@ export const services: Record<Locale, Record<ServiceKey, ServiceCopy>> = {
       ],
     },
     care: {
-      metaTitle: "Správa webu a aplikácií za mesačný paušál | Ergodic",
+      metaTitle: "Správa, podpora a ďalší vývoj webu a aplikácií | Ergodic",
       metaDescription:
-        "Hosting, aktualizácie, monitoring a menšie funkcie každý mesiac za paušál. Jeden kontakt, ktorý pozná celý váš systém.",
-      h1: "Správa webu a aplikácií za mesačný paušál",
-      lead: "Web ani aplikácia nie sú hotové dňom spustenia. Za mesačný paušál ich udržíme v chode a aktuálne a pridáme menšie funkcie, keď ich budete potrebovať.",
+        "Hosting, aktualizácie, monitoring, opravy a nové funkcie po spustení. Pre weby a aplikácie, ktoré sme robili my aj iní.",
+      h1: "Správa a ďalší vývoj webu a aplikácií",
+      lead: "Web ani aplikácia nie sú hotové dňom spustenia. Udržíme ich v chode a aktuálne a pridáme funkcie, keď ich budete potrebovať.",
       forWho: [
         "Firmy bez vlastného programátora, ktoré ho nechcú hľadať pri každej zmene.",
         "Majitelia webov a aplikácií, ktorým pôvodný dodávateľ prestal odpovedať.",
@@ -163,7 +164,7 @@ export const services: Record<Locale, Record<ServiceKey, ServiceCopy>> = {
         "Hosting a SSL certifikáty.",
         "Bezpečnostné a systémové aktualizácie.",
         "Monitoring dostupnosti a chýb.",
-        "Menšie úpravy a nové funkcie každý mesiac.",
+        "Úpravy a nové funkcie podľa toho, čo práve potrebujete.",
         "Jeden kontakt, ktorý pozná celý systém.",
       ],
       faq: [
@@ -173,11 +174,11 @@ export const services: Record<Locale, Record<ServiceKey, ServiceCopy>> = {
         },
         {
           q: "Čo ak potrebujem väčšiu zmenu?",
-          a: "Menšie úpravy sú v paušále. Väčšiu zmenu nakreslíme ako samostatné varianty s cenou a rozhodnete sa vy.",
+          a: "Väčšiu zmenu nakreslíme ako samostatné varianty s cenou a rozhodnete sa vy.",
         },
         {
-          q: "Koľko stojí paušál?",
-          a: "Záleží na tom, koľko systémov spravujeme a koľko práce mesačne čakáte. Cenu poznáte vopred.",
+          q: "Ako sa platí za podporu?",
+          a: "Platiť môžete za odvedenú prácu alebo pevnou mesačnou sumou, ak čakáte prácu pravidelne. Cenu poznáte vopred.",
         },
       ],
     },
@@ -193,6 +194,7 @@ export const services: Record<Locale, Record<ServiceKey, ServiceCopy>> = {
         "Businesses whose old site brings nothing and they can't tell why.",
         "Shops that outgrew a template and need links to stock, CRM or ERP.",
         "Restaurants, guesthouses and services that want a multilingual site and will edit the copy themselves.",
+        "Companies that need a web application, such as ordering, bookings or a client portal.",
       ],
       deliverables: [
         "Design and build on Next.js or Astro, picked by what the site needs.",
@@ -208,7 +210,7 @@ export const services: Record<Locale, Record<ServiceKey, ServiceCopy>> = {
         },
         {
           q: "How long does it take?",
-          a: "We build in small releases. You use the first version before everything is done, and the rest arrives step by step.",
+          a: "It depends on the scope. Each option comes with a timeline as well as a price. We build in parts, so you try the first version while work is still going on.",
         },
         {
           q: "Can I edit the site myself?",
@@ -220,7 +222,7 @@ export const services: Record<Locale, Record<ServiceKey, ServiceCopy>> = {
         },
         {
           q: "What happens after launch?",
-          a: "You can take it over and run it yourself. Or stay on a monthly retainer and we handle hosting, updates and small changes.",
+          a: "You can take it over and run it yourself. Or we keep looking after it: hosting, updates, fixes and new features.",
         },
       ],
     },
@@ -232,7 +234,7 @@ export const services: Record<Locale, Record<ServiceKey, ServiceCopy>> = {
       lead: "One app, one codebase, two stores. We build in React Native and Expo, so a new feature lands on iPhone and Android together and you don't pay for it twice.",
       forWho: [
         "Businesses whose customers come back often and a website isn't enough. Orders, bookings, loyalty.",
-        "People in the field who need the app where there's no signal.",
+        "Companies with staff in the field who need the app where there's no signal.",
         "Startups that want to test an idea on both platforms without two teams.",
       ],
       deliverables: [
@@ -256,7 +258,7 @@ export const services: Record<Locale, Record<ServiceKey, ServiceCopy>> = {
         },
         {
           q: "What happens after launch?",
-          a: "iOS and Android change every year and the app has to keep up. On a monthly plan we maintain it and add small features.",
+          a: "iOS and Android change every year and the app has to keep up. After launch we can keep maintaining it and adding features.",
         },
       ],
     },
@@ -289,7 +291,7 @@ export const services: Record<Locale, Record<ServiceKey, ServiceCopy>> = {
         },
         {
           q: "Is AI reliable with company data?",
-          a: "For some tasks yes, for others no. We use it where a mistake shows up right away, and where money or a customer is involved, a person has the last word.",
+          a: "For some tasks yes, for others no. We use it where its output is easy to check. Where money or a customer is involved, a person has the last word.",
         },
         {
           q: "How much does automation cost?",
@@ -298,11 +300,11 @@ export const services: Record<Locale, Record<ServiceKey, ServiceCopy>> = {
       ],
     },
     care: {
-      metaTitle: "Website and app maintenance retainer | Ergodic",
+      metaTitle: "Website and app maintenance, support and development | Ergodic",
       metaDescription:
-        "Hosting, updates, monitoring and small features every month for a flat fee. One contact who knows your whole system.",
-      h1: "Website and app maintenance on a monthly retainer",
-      lead: "A site or app isn't finished on launch day. On a monthly retainer we keep it running and up to date, and add small features when you need them.",
+        "Hosting, updates, monitoring, fixes and new features after launch. For sites and apps we built and ones we did not.",
+      h1: "Website and app maintenance and ongoing development",
+      lead: "A site or app isn't finished on launch day. We keep it running and up to date, and add features when you need them.",
       forWho: [
         "Companies without an in-house developer who don't want to hunt for one at every change.",
         "Owners of sites and apps whose original vendor stopped answering.",
@@ -312,7 +314,7 @@ export const services: Record<Locale, Record<ServiceKey, ServiceCopy>> = {
         "Hosting and SSL certificates.",
         "Security and platform updates.",
         "Uptime and error monitoring.",
-        "Small changes and new features every month.",
+        "Changes and new features when you need them.",
         "One contact who knows the whole system.",
       ],
       faq: [
@@ -322,11 +324,11 @@ export const services: Record<Locale, Record<ServiceKey, ServiceCopy>> = {
         },
         {
           q: "What if I need a bigger change?",
-          a: "Small changes are in the retainer. A bigger one we draw up as separate options with prices, and you decide.",
+          a: "We draw up a bigger change as separate options with prices, and you decide.",
         },
         {
-          q: "How much is the retainer?",
-          a: "It depends on how many systems we look after and how much work you expect each month. You know the price up front.",
+          q: "How do I pay for support?",
+          a: "You can pay for the work done, or a fixed monthly amount if you expect regular work. You know the price up front.",
         },
       ],
     },

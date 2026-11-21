@@ -14,11 +14,12 @@ type Drawing = {
   chosen: number
 }
 
-// Client projects from denysov.dev plus our own heystol. Variant counts and the chosen variant are illustrative until confirmed.
+// Client projects plus our own heystol, labelled as our product in its kind.
+// The path study is decoration: the sketched variants are not real counts, so the card states no numbers.
 const drawings: Drawing[] = [
-  { id: "kromka", code: "DWG 002", url: "https://www.pekarenkromka.sk", ends: [40, 78, 140, 170], chosen: 1 },
-  { id: "zwicker", code: "DWG 003", url: "https://www.zwicker.sk", ends: [30, 70, 100, 136, 170], chosen: 3 },
-  { id: "heystol", code: "DWG 004", url: site.heystol, ends: [50, 100, 150], chosen: 1 },
+  { id: "kromka", code: "DWG 001", url: "https://www.pekarenkromka.sk", ends: [40, 78, 140, 170], chosen: 1 },
+  { id: "zwicker", code: "DWG 002", url: "https://www.zwicker.sk", ends: [30, 70, 100, 136, 170], chosen: 3 },
+  { id: "heystol", code: "DWG 003", url: site.heystol, ends: [50, 100, 150], chosen: 1 },
 ]
 
 const path = (y: number) => `M40 100 C 150 100, 220 ${y}, 360 ${y}`
@@ -59,19 +60,6 @@ function Study({ ends, chosen }: Pick<Drawing, "ends" | "chosen">) {
       />
       <circle className="r-pop" style={delay(100)} cx="40" cy="100" r="5" fill="var(--cobalt)" />
       <circle className="r-pop" style={delay(done)} cx="360" cy={ends[chosen]} r="7" fill="var(--signal)" />
-      <g fontFamily="var(--font-mono)" fontSize="10" letterSpacing="1" fill="var(--cobalt)">
-        {ends.map((y, i) => (
-          <text
-            key={y}
-            className="r-fade"
-            style={i === chosen ? delay(done) : sketch(i)}
-            x={i === chosen ? 370 : 366}
-            y={y + 4}
-          >
-            V.0{i + 1}
-          </text>
-        ))}
-      </g>
     </svg>
   )
 }
@@ -114,12 +102,8 @@ export function Drawings() {
                   </a>
                 </h3>
                 <dl className="font-mono-caps text-ink-soft grid grid-cols-2 gap-y-2 text-[11px] tracking-[0.04em]">
-                  <dt>{t("considered")}</dt>
-                  <dd>{t("variants", { count: ends.length })}</dd>
                   <dt>{t("built")}</dt>
-                  <dd>
-                    V.0{chosen + 1} · {t(`items.${id}.stack`)}
-                  </dd>
+                  <dd>{t(`items.${id}.stack`)}</dd>
                   <dt>{t("outcome")}</dt>
                   <dd>{t(`items.${id}.result`)}</dd>
                 </dl>

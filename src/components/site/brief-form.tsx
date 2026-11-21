@@ -18,9 +18,9 @@ const label = "font-mono-caps text-cobalt text-[11px] font-normal tracking-[0.08
 const field =
   "text-ink placeholder:text-ink-mute/70 h-auto rounded-none border-0 border-b border-ink/25 bg-transparent px-0 py-1.5 text-lg md:text-lg focus-visible:border-cobalt focus-visible:ring-0 aria-invalid:border-signal-ink aria-invalid:ring-0"
 
-export function BriefForm() {
+export function BriefForm({ need = "website" }: { need?: Need }) {
   const t = useTranslations("Brief")
-  const [selected, setSelected] = useState<string[]>(["website"])
+  const [selected, setSelected] = useState<string[]>([need])
   const [errors, setErrors] = useState<BriefField[]>([])
   const [opened, setOpened] = useState(false)
 

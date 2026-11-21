@@ -2,10 +2,12 @@ import { useTranslations } from "next-intl"
 import { site } from "@/config/site"
 import { trackAttrs } from "@/lib/analytics"
 import { delay } from "@/lib/reveal"
+import type { Need } from "@/lib/brief/schema"
 import { BriefForm } from "./brief-form"
 import { Container } from "./sheet-heading"
 
-export function Contact() {
+/** `need` preselects a project type in the brief, e.g. on a service page. */
+export function Contact({ need }: { need?: Need }) {
   const t = useTranslations("Contact")
 
   return (
@@ -38,7 +40,7 @@ export function Contact() {
           </address>
         </div>
         <div data-reveal style={delay(160)} className="r-up grow lg:self-start">
-          <BriefForm />
+          <BriefForm need={need} />
         </div>
       </Container>
     </section>
